@@ -1,0 +1,156 @@
+[
+    {
+        "level": 0,
+        "necessaryExp": 0,
+        "birds": [
+            {
+                "name": {
+                    "sci": "Columba livia",
+                    "ca": "Colom roquer",
+                    "es": "Paloma bravía",
+                    "en": "Rock pigeon"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Streptopelia decaocto",
+                    "ca": "Tórtora turca",
+                    "es": "tórtola turca",
+                    "en": "Eurasian collared dove"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Columba palumbus",
+                    "ca": "Tudó",
+                    "es": "Paloma torcaz",
+                    "en": "Common wood pigeon"
+                }
+            }
+        ]
+    },
+
+    {
+        "level": 1,
+        "necessaryExp": 10,
+        "birds": [
+            {
+                "name": {
+                    "sci": "Passer domesticus",
+                    "ca": "Pardal",
+                    "es": "Gorrión común",
+                    "en": "House sparrow"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Myiopsitta monachus",
+                    "ca": "Cotorreta pitgrisa",
+                    "es": "Cotorra argentina",
+                    "en": "Monk parakeet"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Psittacula krameri",
+                    "ca": "Cotorra de Kramer",
+                    "es": "Cotorra de Kramer",
+                    "en": "Rose-ringed parakeet"
+                }
+            }
+        ]
+    },
+
+    {
+        "level": 2,
+        "necessaryExp": 30,
+        "birds": [
+            {
+                "name": {
+                    "sci": "Pica pica",
+                    "ca": "Garsa eurasiàtica",
+                    "es": "Urraca común",
+                    "en": "Eurasian magpie"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Larus michahellis",
+                    "ca": "Gavià argentat de potes grogues",
+                    "es": "Gaviota patiamarilla",
+                    "en": "Yellow-legged gull"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Cyanistes caeruleus",
+                    "ca": "Mallerenga blava",
+                    "es": "Herrerillo común",
+                    "en": "Eurasian blue tit"
+                }
+            }
+        ]
+    },
+
+    {
+        "level": 3,
+        "necessaryExp": 60,
+        "birds": [
+            {
+                "name": {
+                    "sci": "Apus apus",
+                    "ca": "Falcillot negre",
+                    "es": "Vencejo común",
+                    "en": "Common swift"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Parus major",
+                    "ca": "Mallerenga carbonera",
+                    "es": "Carbonero común",
+                    "en": "Great tit"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Chloris chloris",
+                    "ca": "Verderol comú",
+                    "es": "Verderón común",
+                    "en": "European greenfinch"
+                }
+            }
+        ]
+    },
+
+    {
+        "level": 4,
+        "necessaryExp": 100,
+        "birds": [
+            {
+                "name": {
+                    "sci": "Sturnus vulgaris",
+                    "ca": "Estornell vulgar",
+                    "es": "Estornino pinto",
+                    "en": "Common starling"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Sturnus unicolor",
+                    "ca": "Estornell negre",
+                    "es": "Estornino negro",
+                    "en": "Spotless starling"
+                }
+            },
+            {
+                "name": {
+                    "sci": "Turdus merula",
+                    "ca": "Merla",
+                    "es": "Mirlo común",
+                    "en": "Common blackbird"
+                }
+            }
+        ]
+    }
+]
