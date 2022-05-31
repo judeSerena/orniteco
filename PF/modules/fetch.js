@@ -6,7 +6,7 @@ https://xeno-canto.org/help/search
 
 export { fetchRecordings, fetchLevelInfo };
 
-async function fetchRecordings(bird = 'Inventus forfetchus', minQuality = 'c', minDuration = 5, maxDuration = 10) {
+async function fetchRecordings(bird = 'Inventus forfetchus', minQuality = 'c', minDuration = 5, maxDuration = 10, callback) {
     //q_gt:c = Quality_GreaterThan:C (recording quality levels go A > E)
     const endpoint = `https://xeno-canto.org/api/2/recordings?query=${bird.replace(/ /g, '+')}`
         + `+q_gt:${minQuality}`
@@ -17,18 +17,18 @@ async function fetchRecordings(bird = 'Inventus forfetchus', minQuality = 'c', m
 
     if(response.ok) {
         let data = await response.json();
-        console.log(data.recordings);
+        callback(data.recordings);
     } else {
         informFetchError(response, this);
     }
 }
 
-async function fetchLevelInfo(level = 0) {
+async function fetchLevelInfo(level = 0, callback) {
     let response = await fetch('./modules/levels.json');
 
     if(response.ok) {
         let data = await response.json();
-        console.log(data[level]);
+        callback(data[level]);
     } else {
         informFetchError(response, this);
     }
