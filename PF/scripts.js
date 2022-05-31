@@ -1,3 +1,4 @@
-import {fetchRecordings} from "./modules/fetch.js";
+// import { fetchRecordings, fetchLevelInfo } from "./modules/fetch.js";
+import { generateQuestion } from "./modules/questions.js";
 
-fetchRecordings('Columba livia', 'c', 5, 12);
+generateQuestion(0);
