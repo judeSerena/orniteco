@@ -4,18 +4,18 @@ import { fetchLevelInfo } from './fetch.js';
 function generateQuestion(currentLevel = 0) {
     /*
     TO-DO:
-    * Find way to add fetching choice options from older levels too, with a lesser chance,
+    * add fetching choice options from older levels too, with a lesser chance,
     and still not repeating any choices...
     */
 
-    fetchLevelInfo(currentLevel, (data) => {
+    fetchLevelInfo((data) => {
         // There will be 3 choices, 1 correct (at index 0) and 2 wrong
         let choices = [,,,];
         let birds;
 
         console.log(choices);
         // Get array of birds from the current level and reorder it randomly...
-        birds = data.birds.slice().sort(() => Math.random() - 0.5);
+        birds = data[currentLevel].birds.slice().sort(() => Math.random() - 0.5);
 
         // ... so that we can extract 3 random choices from it
         choices = birds.slice(-3);

@@ -23,12 +23,12 @@ async function fetchRecordings(bird = 'Inventus forfetchus', minQuality = 'c', m
     }
 }
 
-async function fetchLevelInfo(level = 0, callback) {
+async function fetchLevelInfo(callback) {
     let response = await fetch('./modules/levels.json');
 
     if(response.ok) {
         let data = await response.json();
-        callback(data[level]);
+        callback(data);
     } else {
         informFetchError(response, this);
     }
