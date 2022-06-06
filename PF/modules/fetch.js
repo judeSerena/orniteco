@@ -6,6 +6,14 @@ https://xeno-canto.org/help/search
 
 export { fetchRecordings, fetchLevelInfo };
 
+/**
+ * Asynchronously fetches recording(s) data for a bird and sends it into the provided function.
+ * @param {string} bird Bird to fetch recording(s) data for.
+ * @param {string} minQuality Minimum quality of recording (quality levels go A > E).
+ * @param {int} minDuration Minimum duration of recording in seconds.
+ * @param {int} maxDuration Maximum duration of recording in seconds.
+ * @param {function} callback Function to receive the fetched data as a parameter.
+ */
 async function fetchRecordings(bird = 'Inventus forfetchus', minQuality = 'c', minDuration = 5, maxDuration = 10, callback) {
     //q_gt:c = Quality_GreaterThan:C (recording quality levels go A > E)
     const endpoint = `https://xeno-canto.org/api/2/recordings?query=${bird.replace(/ /g, '+')}`
@@ -23,6 +31,10 @@ async function fetchRecordings(bird = 'Inventus forfetchus', minQuality = 'c', m
     }
 }
 
+/**
+ * Asynchronously fetches level info from levels.json file.
+ * @param {function} callback Function to receive the fetched data as a parameter.
+ */
 async function fetchLevelInfo(callback) {
     let response = await fetch('./modules/levels.json');
 
@@ -35,6 +47,8 @@ async function fetchLevelInfo(callback) {
 }
 
 function informFetchError(response, func) {
-    console.error(`Error: could not fetch at \'${func.name}\'.` +
-      `Reason: ${response.status} (${response.statusText}).`);
+    console.error(
+        `Error: could not fetch at \'${func.name}\'.` +
+        `Reason: ${response.status} (${response.statusText}).`
+    );
 }
