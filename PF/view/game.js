@@ -7,12 +7,11 @@ import { fetchRecordings } from '../data/fetch.js'
 const minQuality = 'c';
 const minDuration = 5;
 const maxDuration = 10;
+const language = 'ca';
 
 // Retrieve DOM elements
 const audioElement = document.getElementsByTagName('audio')[0];
 const answerButtons = document.querySelectorAll('.answers button');
-
-genQuestionCandidates(0, drawQuestion);
 
 /**
  * Draws game interface (with question and 3 possible answers) in view/game.html, from an array of 3 bird names,
@@ -31,8 +30,12 @@ function drawQuestion(choices) {
         // Random choice order, stored in a sepparate array so that we can always
         // access the correct option at choices[0].
         const choiceOrder = [0, 1, 2].sort(() => Math.random() - 0.5);
-        answerButtons[0].textContent = choices[choiceOrder[0]].name.ca;
-        answerButtons[1].textContent = choices[choiceOrder[1]].name.ca;
-        answerButtons[2].textContent = choices[choiceOrder[2]].name.ca;
+        answerButtons[0].textContent = choices[choiceOrder[0]].name[language];
+        answerButtons[0].setAttribute('data-correct', 'yes');
+        answerButtons[1].textContent = choices[choiceOrder[1]].name[language];
+        answerButtons[2].textContent = choices[choiceOrder[2]].name[language];
     })
 }
+
+genQuestionCandidates(0, drawQuestion);
+
