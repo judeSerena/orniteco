@@ -36,19 +36,19 @@ async function fetchRecordings(bird = 'Inventus forfetchus', minQuality = 'c', m
  * @param {function} callback Function to receive the fetched data as a parameter.
  */
 async function fetchLevelInfo(callback) {
-    let response = await fetch('./modules/levels.json');
+    let response = await fetch('../model/levels.json');
 
     if(response.ok) {
         let data = await response.json();
         callback(data);
     } else {
-        informFetchError(response, this);
+        informFetchError(response, fetchLevelInfo);
     }
 }
 
 function informFetchError(response, func) {
     console.error(
-        `Error: could not fetch at \'${func.name}\'.` +
+        `Error: could not fetch at \'${func.name}\'. ` +
         `Reason: ${response.status} (${response.statusText}).`
     );
 }
