@@ -36,7 +36,7 @@ async function fetchRecordings(bird = 'Inventus forfetchus', minQuality = 'c', m
  * @param {function} callback Function to receive the fetched data as a parameter.
  */
 async function fetchLevelInfo(callback) {
-    let response = await fetch('../model/levels.json');
+    let response = await fetch('./data/levels.json');
 
     if(response.ok) {
         let data = await response.json();

@@ -1,5 +1,5 @@
-import { genQuestionCandidates } from '../model/genQuestionCandidates.js';
-import { fetchRecordings } from '../model/fetch.js'
+import { genQuestionCandidates } from '../controller/genQuestionCandidates.js';
+import { fetchRecordings } from '../data/fetch.js'
 
 // Settings for recording fetching.
 ////////////////////////////////////////////////// TO-DO: make settings editable by user?
@@ -25,7 +25,7 @@ function drawQuestion(choices) {
 
         console.log(recordings);
         // const randomIndex = Math.random() * recordings.length
-
+        
 
 
 

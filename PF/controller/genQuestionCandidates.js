@@ -1,5 +1,5 @@
 export { genQuestionCandidates };
-import { fetchLevelInfo } from './fetch.js';
+import { fetchLevelInfo } from '../data/fetch.js';
 
 function genQuestionCandidates(currentLevel = 0, callback) {
     /*
