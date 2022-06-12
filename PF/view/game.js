@@ -24,7 +24,7 @@ function drawQuestion(choices) {
     fetchRecordings(choices[0].name.sci, minQuality, minDuration, maxDuration, (recordings) => {
         // Choose a random recording from the ones available for this species and load it into the <audio> tag
         const randomIndex = Math.floor(Math.random() * recordings.length);
-        setAudio(audioElement, recordings[randomIndex].file)
+        audioElement.setAttribute('src', recordings[randomIndex].file);
 
         console.log(`Options:`);
         // Random choice order, stored in a sepparate array so that we can always
@@ -34,13 +34,4 @@ function drawQuestion(choices) {
         console.log(`B: ${choices[choiceOrder[1]].name.en}`);
         console.log(`C: ${choices[choiceOrder[2]].name.en}`);
     })
-}
-
-/**
- * Sets audio source to an audio DOM element.
- * @param {HTMLAudioElement} element
- * @param {String} url
- */
-function setAudio(element, url) {
-    element.setAttribute('src', url);
 }
