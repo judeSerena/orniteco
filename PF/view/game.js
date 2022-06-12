@@ -10,6 +10,7 @@ const maxDuration = 10;
 
 // Retrieve DOM elements
 const audioElement = document.getElementsByTagName('audio')[0];
+const answerButtons = document.querySelectorAll('.answers button');
 
 genQuestionCandidates(0, drawQuestion);
 
