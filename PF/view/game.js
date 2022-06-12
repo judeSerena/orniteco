@@ -3,12 +3,13 @@ import { fetchRecordings } from '../data/fetch.js'
 
 // Settings for recording fetching.
 ////////////////////////////////////////////////// TO-DO: make settings editable by user?
+////////////////////////////////////////////////// TO-DO: load audio element hidden in html, then unhide it once its loaded
 const minQuality = 'c';
 const minDuration = 5;
 const maxDuration = 10;
 
 // Retrieve DOM elements
-const audio = document.getElementsByTagName('audio')[0];
+const audioElement = document.getElementsByTagName('audio')[0];
 
 genQuestionCandidates(0, drawQuestion);
 
@@ -21,17 +22,9 @@ function drawQuestion(choices) {
     // Get recording from first bird (correct choice) in choices.
     // Draw the question via callback when we get the data.
     fetchRecordings(choices[0].name.sci, minQuality, minDuration, maxDuration, (recordings) => {
-        console.log(`Question: audio from ${choices[0].name.en}`);
-
-        console.log(recordings);
-        // const randomIndex = Math.random() * recordings.length
-        
-
-
-
-
-
-
+        // Choose a random recording from the ones available for this species and load it into the <audio> tag
+        const randomIndex = Math.floor(Math.random() * recordings.length);
+        setAudio(audioElement, recordings[randomIndex].file)
 
         console.log(`Options:`);
         // Random choice order, stored in a sepparate array so that we can always
@@ -50,5 +43,4 @@ function drawQuestion(choices) {
  */
 function setAudio(element, url) {
     element.setAttribute('src', url);
-
 }
