@@ -31,8 +31,8 @@ function drawQuestion(choices) {
         // Random choice order, stored in a sepparate array so that we can always
         // access the correct option at choices[0].
         const choiceOrder = [0, 1, 2].sort(() => Math.random() - 0.5);
-        console.log(`A: ${choices[choiceOrder[0]].name.en}`);
-        console.log(`B: ${choices[choiceOrder[1]].name.en}`);
-        console.log(`C: ${choices[choiceOrder[2]].name.en}`);
+        answerButtons[0].textContent = choices[choiceOrder[0]].name.ca;
+        answerButtons[1].textContent = choices[choiceOrder[1]].name.ca;
+        answerButtons[2].textContent = choices[choiceOrder[2]].name.ca;
     })
 }
