@@ -26,7 +26,6 @@ function drawQuestion(choices) {
         const randomIndex = Math.floor(Math.random() * recordings.length);
         audioElement.setAttribute('src', recordings[randomIndex].file);
 
-        console.log(`Options:`);
         // Random choice order, stored in a sepparate array so that we can always
         // access the correct option at choices[0].
         const choiceOrder = [0, 1, 2].sort(() => Math.random() - 0.5);
@@ -34,8 +33,18 @@ function drawQuestion(choices) {
         answerButtons[0].setAttribute('data-correct', 'yes');
         answerButtons[1].textContent = choices[choiceOrder[1]].name[language];
         answerButtons[2].textContent = choices[choiceOrder[2]].name[language];
+        ///////////////////////////////////////////////////////////////////////////TO-DO: mostrar també imatges.
+        //els DIVS han de contenir botó + image.
+        //s'haurà d'arreglar els querySelector.
     })
 }
 
+/////////////////////////////////////////////////////////////////////////TO-DO: rebre nivell des de localstorage
+//(hauré guardat el nivell a un arxiu levels.js enllaçat a levels.html)
+//a levels.js també hauré de settejar exp a 0 si no es troba exp guardada a localstorage, i segons la exp, mostrar nivells desbloquejats
 genQuestionCandidates(0, drawQuestion);
 
+//eventListeners per al div contenint els botons
+//si el botó recollit en e (event) té l'atribut data-correct = 'yes'
+//llavors suma exp i actualitza-la a localstorage, i mostra que és correcte, i genera nova pregunta si es clica botó de següent
+//else mostra que és incorrecte i genera nova pregunta si es clica botó de següent
