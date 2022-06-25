@@ -1,5 +1,6 @@
 import { genQuestionCandidates } from '../controller/genQuestionCandidates.js';
 import { fetchRecordings } from '../data/fetch.js'
+import { sumPoints, getPoints } from '../controller/settings.js';
 
 // Settings for recording fetching.
 ////////////////////////////////////////////////// TO-DO: make settings editable by user?
@@ -10,9 +11,14 @@ const maxDuration = 10;
 const language = 'ca';
 
 // Retrieve DOM elements
+const pointBar = document.getElementsByClassName('point-bar')[0];
 const audioElement = document.getElementsByTagName('audio')[0];
 const answerContainer = document.getElementsByClassName('answers')[0];
 const answerButtons = document.querySelectorAll('.answers button');
+
+function updatePointBar(){
+    pointBar.textContent = getPoints();
+}
 
 /**
  * Draws game interface (with question and 3 possible answers) in view/game.html, from an array of 3 bird names,
@@ -44,13 +50,16 @@ function drawQuestion(choices) {
 //(hauré guardat el nivell a un arxiu levels.js enllaçat a levels.html)
 //a levels.js també hauré de settejar exp a 0 si no es troba exp guardada a localstorage, i segons la exp, mostrar nivells desbloquejats
 genQuestionCandidates(0, drawQuestion);
+updatePointBar();
 
 answerContainer.addEventListener('click', e => {
     if (e.target.classList.contains('btn')){
-        // If the clicked button is the correct choice (index 0)...
+        // Correct choice button is the one at index 0
         if (e.target === answerButtons[0]) {
             alert('correct');
-            //suma exp i actualitza-la a localstorage, i mostra que és correcte, i genera nova pregunta si es clica botó de següent
+            sumPoints(10);
+            updatePointBar();
+            genQuestionCandidates(0, drawQuestion);
         } else {
             alert('incorrect');
             //mostra que és incorrecte i genera nova pregunta si es clica botó de següent
