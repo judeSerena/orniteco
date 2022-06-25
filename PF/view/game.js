@@ -35,22 +35,22 @@ function drawQuestion(choices) {
         const randomIndex = Math.floor(Math.random() * recordings.length);
         audioElement.setAttribute('src', recordings[randomIndex].file);
 
-        // Random choice order, stored in a sepparate array so that we can always
-        // access the correct option at choices[0].
+        // Random choice order, stored in a sepparate array so that we can
+        // know that the correct option is always at answerButtons[0] even if
+        // they are displayed in random order on the page.
         const choiceOrder = [0, 1, 2].sort(() => Math.random() - 0.5);
-        answerButtons[0].textContent = choices[choiceOrder[0]].name[language];
-        // answerButtons[0].setAttribute('data-correct', 'yes');////////////////////////////////crec que no caldrà
-        answerButtons[1].textContent = choices[choiceOrder[1]].name[language];
-        answerButtons[2].textContent = choices[choiceOrder[2]].name[language];
+        answerButtons[choiceOrder[0]].textContent = choices[0].name[language];
+        answerButtons[choiceOrder[0]].setAttribute('data-correct', 'yes');
+        answerButtons[choiceOrder[1]].textContent = choices[1].name[language];
+        answerButtons[choiceOrder[1]].setAttribute('data-correct', 'no');
+        answerButtons[choiceOrder[2]].textContent = choices[2].name[language];
+        answerButtons[choiceOrder[2]].setAttribute('data-correct', 'no');
         ///////////////////////////////////////////////////////////////////////////TO-DO: mostrar també imatges.
         //els DIVS han de contenir botó + image.
         //s'haurà d'arreglar els querySelector.
     })
 }
 
-/////////////////////////////////////////////////////////////////////////TO-DO: rebre nivell des de localstorage
-//(hauré guardat el nivell a un arxiu levels.js enllaçat a levels.html)
-//a levels.js també hauré de settejar exp a 0 si no es troba exp guardada a localstorage, i segons la exp, mostrar nivells desbloquejats
 levelTitle.textContent = `Nivell ${level + 1}`
 genQuestionCandidates(level, drawQuestion);
 updatePointBar();
@@ -58,14 +58,14 @@ updatePointBar();
 answerContainer.addEventListener('click', e => {
     if (e.target.classList.contains('btn')){
         // Correct choice button is the one at index 0
-        if (e.target === answerButtons[0]) {
+        if (e.target.dataset.correct === 'yes') {
             alert('correct');
             sumPoints(10);
             updatePointBar();
             genQuestionCandidates(level, drawQuestion);
         } else {
             alert('incorrect');
-            //mostra que és incorrecte i genera nova pregunta si es clica botó de següent
+            genQuestionCandidates(level, drawQuestion);
         }
     }
 });
