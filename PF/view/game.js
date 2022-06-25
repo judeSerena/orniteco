@@ -1,6 +1,6 @@
 import { genQuestionCandidates } from '../controller/genQuestionCandidates.js';
 import { fetchRecordings } from '../data/fetch.js'
-import { sumPoints, getPoints } from '../controller/settings.js';
+import { sumPoints, getPoints, getSelectedLevel } from '../controller/settings.js';
 
 // Settings for recording fetching.
 ////////////////////////////////////////////////// TO-DO: make settings editable by user?
@@ -9,9 +9,11 @@ const minQuality = 'c';
 const minDuration = 5;
 const maxDuration = 10;
 const language = 'ca';
+const level = getSelectedLevel();
 
 // Retrieve DOM elements
 const pointBar = document.getElementsByClassName('point-bar')[0];
+const levelTitle = document.querySelector('.game-top-bar h2');
 const audioElement = document.getElementsByTagName('audio')[0];
 const answerContainer = document.getElementsByClassName('answers')[0];
 const answerButtons = document.querySelectorAll('.answers button');
@@ -49,7 +51,8 @@ function drawQuestion(choices) {
 /////////////////////////////////////////////////////////////////////////TO-DO: rebre nivell des de localstorage
 //(hauré guardat el nivell a un arxiu levels.js enllaçat a levels.html)
 //a levels.js també hauré de settejar exp a 0 si no es troba exp guardada a localstorage, i segons la exp, mostrar nivells desbloquejats
-genQuestionCandidates(0, drawQuestion);
+levelTitle.textContent = `Nivell ${level + 1}`
+genQuestionCandidates(level, drawQuestion);
 updatePointBar();
 
 answerContainer.addEventListener('click', e => {
@@ -59,7 +62,7 @@ answerContainer.addEventListener('click', e => {
             alert('correct');
             sumPoints(10);
             updatePointBar();
-            genQuestionCandidates(0, drawQuestion);
+            genQuestionCandidates(level, drawQuestion);
         } else {
             alert('incorrect');
             //mostra que és incorrecte i genera nova pregunta si es clica botó de següent
