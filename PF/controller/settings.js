@@ -1,3 +1,5 @@
+// Saving and retrieving settings and game state, to and from localStorage
+
 function selectLevel(level) {
     localStorage.setItem('level', level);
 }
@@ -22,4 +24,22 @@ function pointsNecessary(level) {
     return level * (50 * level);
 }
 
-export { selectLevel, getSelectedLevel, sumPoints, getPoints, pointsNecessary };
+function setTheme(theme) {
+    localStorage.setItem('theme', theme);
+}
+
+function getTheme() {
+    const theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+    return theme;
+}
+
+
+export {
+    selectLevel,
+    getSelectedLevel,
+    sumPoints,
+    getPoints,
+    pointsNecessary,
+    setTheme,
+    getTheme
+};

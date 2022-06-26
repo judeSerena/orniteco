@@ -1,0 +1,40 @@
+[
+    {
+        "name": "light",
+        "colors": {
+            "--background": "#dcdedd",
+	        "--lighter": "#fff4",
+	        "--shine": "#fff",
+	        "--shadow": "#9fb3b1",
+	        "--text": "#3f3d38",
+	        "--titles": "#4e585d",
+	        "--links": "#7eb68a"
+        }
+    },
+
+    {
+        "name": "dark",
+        "colors": {
+            "--background": "#38423B",
+	        "--lighter": "#4E594C44",
+	        "--shine": "#4E594C",
+	        "--shadow": "#303638",
+	        "--text": "#CAD1C9",
+	        "--titles": "#CCD6CB",
+	        "--links": "#7eb68a"
+        }
+    },
+
+    {
+        "name": "highContrast",
+        "colors": {
+            "--background": "#fff",
+	        "--lighter": "#fff",
+	        "--shine": "#fff",
+	        "--shadow": "#8C8C8C",
+	        "--text": "#000",
+	        "--titles": "#000",
+	        "--links": "#008013"
+        }
+    }
+]
