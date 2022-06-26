@@ -49,12 +49,31 @@
 .big-btn,
 .btn {
     text-align: center;
-    padding: 1em;
+    margin: 1em;
+    padding: 0.5em;
 }
 
 .disabledLink {
     pointer-events: none;
     color: var(--shadow);
+}
+
+#feedbackBar {
+    padding: 2em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#feedbackBar a {
+    width: 5em;
+}
+
+.correct {
+    box-shadow: inset 0 0 10em var(--shine);
+}
+
+.incorrect {
+    box-shadow: inset 0 0 10em var(--shadow);
 }
 
 .neumorphic.disabledLink {
@@ -143,6 +162,8 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     height: 100vh;
     padding: 0 20%;
+    transition:
+        box-shadow 0.2s,
 }
 
 h1,
