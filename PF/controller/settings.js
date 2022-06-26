@@ -17,4 +17,9 @@ function getPoints() {
     return parseInt(points);
 }
 
-export { selectLevel, getSelectedLevel, sumPoints, getPoints };
+// Determine the number of points necessary to unlock each level
+function pointsNecessary(level) {
+    return level * (50 * level);
+}
+
+export { selectLevel, getSelectedLevel, sumPoints, getPoints, pointsNecessary };

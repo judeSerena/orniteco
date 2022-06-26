@@ -33,6 +33,17 @@
     padding: 1em;
 }
 
+.disabledLink {
+    pointer-events: none;
+    color: var(--shadow);
+}
+
+.neumorphic.disabledLink {
+    background-color: var(--background);
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 0.2em, var(--lighter) 0.2em, var(--lighter) 0.4em);
+    color: var(--shadow);
+}
+
 .flex-center-column {
     display: flex;
         flex-direction: column;
