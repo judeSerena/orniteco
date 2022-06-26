@@ -39,20 +39,13 @@ function drawQuestion(birdChoices) {
         /* Random choice order, stored in a sepparate array so that we know that the correct option
         is always at answerButtons[0] even if they are displayed in random order on the page.*/
         const choiceOrder = [0, 1, 2].sort(() => Math.random() - 0.5);
-        answerButtons[choiceOrder[0]].textContent = birdChoices[0].name[language];
-        answerButtons[choiceOrder[0]].setAttribute('data-correct', 'yes');
-        // Randomly choose 1 out of 2 possible images for each bird (files named "bird 1.jpg" and "bird 2.jpg")
-        answerButtonsImgs[choiceOrder[0]].src = `./data/imgs/${birdChoices[0].name.sci} ${Math.floor(Math.random() * 2) + 1}.jpg`;
-        console.log(answerButtonsImgs[choiceOrder[0]]);
-        console.log(answerButtonsImgs);
-
-        answerButtons[choiceOrder[1]].textContent = birdChoices[1].name[language];
-        answerButtons[choiceOrder[1]].setAttribute('data-correct', 'no');
-        answerButtonsImgs[choiceOrder[1]].src = `./data/imgs/${birdChoices[1].name.sci} ${Math.floor(Math.random() * 2) + 1}.jpg`;
-
-        answerButtons[choiceOrder[2]].textContent = birdChoices[2].name[language];
-        answerButtons[choiceOrder[2]].setAttribute('data-correct', 'no');
-        answerButtonsImgs[choiceOrder[2]].src = `./data/imgs/${birdChoices[2].name.sci} ${Math.floor(Math.random() * 2) + 1}.jpg`;
+        
+        for(let i = 0; i < answerButtons.length; i++) {
+            answerButtons[choiceOrder[i]].textContent = birdChoices[i].name[language];
+            answerButtons[choiceOrder[i]].setAttribute('data-correct', i === 0 ? 'yes' : 'no');
+            // Randomly choose 1 out of 2 possible images for each bird (files named "bird 1.jpg" and "bird 2.jpg")
+            answerButtonsImgs[choiceOrder[i]].src = `./data/imgs/${birdChoices[i].name.sci} ${Math.floor(Math.random() * 2) + 1}.jpg`;
+        }
     })
 }
 
