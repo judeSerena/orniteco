@@ -5,15 +5,33 @@
     --lighter: #fff4;
     --shine: #fff;
     --shadow: #9fb3b1;
-    --accent: #c9d6ea;
     --text: #3f3d38;
     --titles: #4e585d;
     --links: #7eb68a;
+
+    --borderRadius: 1em;
+    --hoverFilter: 0.9;
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+.answers a {
+    width: 10em;
+    height: 12em;
+    padding: 0;
+    transition:
+        filter 0.2s,
+}
+
+.answers img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-top-left-radius: var(--borderRadius);
+    border-top-right-radius: var(--borderRadius);
 }
 
 .big-btn {
@@ -25,6 +43,7 @@
 .btn {
     width: 80%;
     font-size: larger;
+    cursor: pointer;
 }
 
 .big-btn,
@@ -95,7 +114,7 @@
         -0.3em -0.3em 1em var(--shine),
         0.3em 0.3em 0.6em var(--shadow);
     color: var(--titles);
-    border-radius: 1em;
+    border-radius: var(--borderRadius);
 }
 
 .title {
@@ -107,7 +126,7 @@ a {
     font-weight: bold;
     text-decoration: none;
     transition:
-        background-color 0.2s,
+        filter 0.2s,
         color 0.2s;
 }
 
@@ -116,7 +135,7 @@ a:hover {
 }
 
 a.neumorphic:hover {
-    background-color: unset;
+    filter: brightness(var(--hoverFilter));
 }
 
 body {
