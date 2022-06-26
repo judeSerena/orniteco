@@ -35,6 +35,19 @@ function resetFeedback() {
     document.body.className = '';
 }
 
+// Enable or disable clickability of the answer buttons
+function changeAnswerClickability(on) {
+    if (on === true) {
+        for (const button of answerButtons) {
+            button.classList.remove('disabledLink');
+        }
+    } else {
+        for (const button of answerButtons) {
+            button.classList.add('disabledLink');
+        }
+    }
+}
+
 /**
  * Draws game interface (with question and 3 possible answers) in view/game.html, from an array of 3 bird names,
  * the first of which is the correct option.
@@ -49,6 +62,7 @@ function drawQuestion(birdChoices) {
         audioElement.setAttribute('src', recordings[randomIndex].file);
 
         resetFeedback();
+        changeAnswerClickability(true);
 
         // Save the correct option's name for the feedback
         correctOption = birdChoices[0].name[language];
@@ -83,10 +97,12 @@ function correctAnswer() {
     correctFeedback();
     sumPoints(10);
     updatePointBar();
+    changeAnswerClickability(false);
 }
 
 function incorrectAnswer() {
     incorrectFeedback();
+    changeAnswerClickability(false);
 }
 
 answerContainer.addEventListener('click', e => {
