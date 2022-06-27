@@ -9,32 +9,37 @@
         <script src="./view/applyTheme.js" type="module" defer></script>
     </head>
 
-    <body>
-        <header class="game-top-bar">
-            <div class="point-bar">Punts d'experiència</div>
-            <a href="./options.html">Opcions</a>
+    <body class="flex-center-column">
+        <header>
+            <div class="game-top-bar flex-center-row">
+                <ul>
+                    <li><a href="./levels.html">🡄 Enrere</a></li>
+                    <li><a href="./options.html">Opcions</a></li>
+                </ul>
+                <div class="point-bar">Punts d'experiència</div>
+            </div>
             <h2>Nivell</h2>
         </header>
 
-        <main class="flex-center-column">
+        <main class="question flex-center-column neumorphic">
             <p>A quina espècie pertany aquest cant?</p>
-            <audio controls>
+            <audio controls class="neumorphic">
                 <source src="" type="audio/mpeg">
-                El teu navegador no soporta audio incrustat amb HTML5. Però pots <a href="">descarregar l'audio</a>.
+                El teu navegador no soporta audio incrustat amb HTML5.
             </audio>
 
             <div class="answers flex-center-row">
                 <a class="neumorphic btn" data-correct='no'>
                     <img>
-                    <p>Carregant...</p>
+                    <p></p>
                 </a>
                 <a class="neumorphic btn" data-correct='no'>
                     <img>
-                    <p>Carregant...</p>
+                    <p></p>
                 </a>
                 <a class="neumorphic btn" data-correct='no'>
                     <img>
-                    <p>Carregant...</p>
+                    <p></p>
                 </a>
             </div>
 

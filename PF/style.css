@@ -19,8 +19,8 @@
 }
 
 .answers a {
-    width: 10em;
-    height: 12em;
+    width: 35%;
+    height: 15em;
     padding: 0;
     transition:
         filter 0.2s,
@@ -58,10 +58,29 @@
     color: var(--shadow);
 }
 
+.game-top-bar {
+    padding: 0.3em;
+}
+
+.game-top-bar li {
+    list-style: none;
+    display: inline-block;
+    margin: 1em;
+}
+
+.question {
+    padding: 1em;
+    margin-top: 2em;
+}
+
+.question audio {
+    margin: 1em;
+}
+
 #feedbackBar {
-    padding: 2em;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin-top: 1em;
 }
 
 #feedbackBar a {
