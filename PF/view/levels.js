@@ -2,10 +2,10 @@ import { selectLevel, getPoints, pointsNecessary } from '../controller/settings.
 
 // Retrieve the level buttons
 const levelsContainer = document.getElementsByClassName('lvl-nav')[0];
-const levels = levelsContainer.getElementsByTagName('a');
+const levels = levelsContainer.getElementsByTagName('div');
 
 levelsContainer.addEventListener('click', e => {
-    if (e.target.classList.contains('btn')){
+    if (e.target.tagName === 'A'){
         // Levels get shown on-screen with index 1, but we operate with them in index 0
         selectLevel(parseInt(e.target.textContent) - 1);
     }
