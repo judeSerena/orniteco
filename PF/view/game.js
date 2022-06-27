@@ -1,6 +1,6 @@
 import { genQuestionCandidates } from '../controller/genQuestionCandidates.js';
 import { fetchRecordings } from '../data/fetch.js'
-import { sumPoints, getPoints, getSelectedLevel } from '../controller/settings.js';
+import { sumPoints, getPoints, pointsNecessary, getSelectedLevel } from '../controller/settings.js';
 
 // Settings for recording fetching.
 ////////////////////////////////////////////////// TO-DO: make settings editable by user?
@@ -10,6 +10,7 @@ const minDuration = 5;
 const maxDuration = 10;
 const language = 'ca';
 const level = getSelectedLevel();
+const pointsPerCorrectAnswer = 10;
 let correctOption = '';
 
 // Retrieve DOM elements
@@ -19,7 +20,8 @@ const feedbackMessage = feedbackBar.getElementsByTagName('p')[0];
 const nextQuestionBtn = feedbackBar.getElementsByTagName('a')[0];
 const levelTitle = document.querySelector('header h2');
 const audioElement = document.getElementsByTagName('audio')[0];
-const answerContainer = document.getElementsByClassName('answers')[0];
+const questionContainer = document.getElementsByClassName('question')[0];
+const answerContainer = questionContainer.getElementsByClassName('answers')[0];
 const answerButtons = document.querySelectorAll('.answers a');
 const answerButtonsTexts = document.querySelectorAll('.answers a p');
 const answerButtonsImgs = document.querySelectorAll('.answers a img');
@@ -33,6 +35,8 @@ function resetFeedback() {
     feedbackMessage.innerHTML = '';
     nextQuestionBtn.hidden = true;
     document.body.className = '';
+    questionContainer.classList.remove('incorrect');
+    questionContainer.classList.remove('correct');
 }
 
 // Enable or disable clickability of the answer buttons
@@ -85,18 +89,28 @@ function correctFeedback() {
     feedbackMessage.innerHTML = 'Correcte!';
     nextQuestionBtn.hidden = false;
     document.body.className = 'correct';
+    questionContainer.classList.remove('correct');
 }
 
 function incorrectFeedback() {
     feedbackMessage.innerHTML = `La resposta correcta era <b>${correctOption}</b>.`;
     nextQuestionBtn.hidden = false;
     document.body.className = 'incorrect';
+    questionContainer.classList.remove('incorrect');
+}
+
+function givePoints() {
+    console.log(pointsNecessary(level + 1));
+    if (getPoints() + pointsPerCorrectAnswer <= pointsNecessary(level + 1)) {
+        feedbackMessage.innerHTML += ' +10 punts.';
+        sumPoints(10);
+        updatePointBar();
+    }
 }
 
 function correctAnswer() {
     correctFeedback();
-    sumPoints(10);
-    updatePointBar();
+    givePoints();
     changeAnswerClickability(false);
 }
 
