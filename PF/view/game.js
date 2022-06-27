@@ -15,28 +15,49 @@ let correctOption = '';
 
 // Retrieve DOM elements
 const pointBar = document.getElementsByClassName('point-bar')[0];
+const pointTotal = document.getElementsByClassName('point-total')[0];
+const levelTitle = document.querySelector('header h2');
+
 const feedbackBar = document.getElementById('feedbackBar');
 const feedbackMessage = feedbackBar.getElementsByTagName('p')[0];
 const nextQuestionBtn = feedbackBar.getElementsByTagName('a')[0];
-const levelTitle = document.querySelector('header h2');
-const audioElement = document.getElementsByTagName('audio')[0];
+
 const questionContainer = document.getElementsByClassName('question')[0];
+const audioElement = questionContainer.getElementsByTagName('audio')[0];
 const answerContainer = questionContainer.getElementsByClassName('answers')[0];
-const answerButtons = document.querySelectorAll('.answers a');
-const answerButtonsTexts = document.querySelectorAll('.answers a p');
-const answerButtonsImgs = document.querySelectorAll('.answers a img');
+const answerButtons = answerContainer.querySelectorAll('.answers a');
+const answerButtonsTexts = answerContainer.querySelectorAll('.answers a p');
+const answerButtonsImgs = answerContainer.querySelectorAll('.answers a img');
 
 function loadBackground(level) {
     // Background images must be saved with 0.2 opacity and named starting with index 0
     document.body.style.backgroundImage = `url(\"./data/imgs/lvls/${level}.jpg\")`;
     document.body.style.backgroundBlendMode = 'multiply';
-    console.log(document.body.style.backgroundImage);
 }
 
 loadBackground(level);
 
-function updatePointBar() {
-    pointBar.textContent = getPoints();
+function redrawPoints() {
+    /*
+    100% of bar = points until next level
+    A% of B = A / B * 100
+    Then we need to subtract from A the points we already needed to unlock the current level
+    */
+    let width = (getPoints() >= pointsNecessary(level + 1)) ?
+        100 : Math.floor((getPoints() - pointsNecessary(level)) / pointsNecessary(level + 1) * 100);
+    pointBar.style.width = width + '%';
+    
+    // By removing and re-adding the class with the animation, it is played again
+    pointBar.classList.remove('point-bar-glow');
+    pointTotal.classList.remove('point-text-glow');
+    /* This next line is needed to trigger a DOM reflow. Otherwise the animation doesn't restart
+    when we add the class */
+    void pointBar.offsetWidth;
+    void pointTotal.offsetWidth;
+    pointBar.classList.add('point-bar-glow');
+    pointTotal.classList.add('point-text-glow');
+
+    pointTotal.textContent = getPoints();
 }
 
 // Reset the content of the answer feedback bar and the color of the body
@@ -98,22 +119,21 @@ function correctFeedback() {
     feedbackMessage.innerHTML = 'Correcte!';
     nextQuestionBtn.hidden = false;
     document.body.className = 'correct';
-    questionContainer.classList.remove('correct');
+    questionContainer.classList.add('correct');
 }
 
 function incorrectFeedback() {
     feedbackMessage.innerHTML = `La resposta correcta era <b>${correctOption}</b>.`;
     nextQuestionBtn.hidden = false;
     document.body.className = 'incorrect';
-    questionContainer.classList.remove('incorrect');
+    questionContainer.classList.add('incorrect');
 }
 
 function givePoints() {
-    console.log(pointsNecessary(level + 1));
     if (getPoints() + pointsPerCorrectAnswer <= pointsNecessary(level + 1)) {
         feedbackMessage.innerHTML += ' +10 punts.';
         sumPoints(10);
-        updatePointBar();
+        redrawPoints();
     }
 }
 
@@ -149,4 +169,4 @@ nextQuestionBtn.addEventListener('click', () => {
 
 levelTitle.textContent = `Nivell ${level + 1}`
 genQuestionCandidates(level, drawQuestion);
-updatePointBar();
+redrawPoints();

@@ -163,6 +163,33 @@
     border-radius: var(--borderRadius);
 }
 
+.point-bar-container {
+    width: 25%;
+    height: 1em;
+}
+
+.point-bar {
+    background-color: var(--links);
+    height: 1em;
+    width: 0%;
+    border-radius: var(--borderRadius);
+}
+
+.point-bar-glow {
+    animation-name: point-bar-glow;
+        animation-duration: 2s;
+}
+
+.point-text-glow {
+    animation-name: point-text-glow;
+        animation-duration: 2s;
+}
+
+.point-total {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 .title {
     font-size: 5em;
 }
@@ -199,6 +226,26 @@ h1,
 h2 {
     color: var(--titles);
     text-align: center;
+}
+
+@keyframes point-bar-glow {
+    from {
+        background-color:  var(--shine);
+    }
+
+    to {
+        background-color: var(--links);
+    }
+}
+
+@keyframes point-text-glow {
+    from {
+        color:  var(--shine);
+    }
+
+    to {
+        color: var(--text);
+    }
 }
 
 @media (max-width: 700px){
