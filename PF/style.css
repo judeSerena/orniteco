@@ -192,6 +192,7 @@ body {
     transition:
         box-shadow 0.2s;
     color: var(--text);
+    background-size: cover;
 }
 
 h1,

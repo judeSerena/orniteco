@@ -26,6 +26,15 @@ const answerButtons = document.querySelectorAll('.answers a');
 const answerButtonsTexts = document.querySelectorAll('.answers a p');
 const answerButtonsImgs = document.querySelectorAll('.answers a img');
 
+function loadBackground(level) {
+    // Background images must be saved with 0.2 opacity and named starting with index 0
+    document.body.style.backgroundImage = `url(\"./data/imgs/lvls/${level}.jpg\")`;
+    document.body.style.backgroundBlendMode = 'multiply';
+    console.log(document.body.style.backgroundImage);
+}
+
+loadBackground(level);
+
 function updatePointBar() {
     pointBar.textContent = getPoints();
 }
