@@ -4,7 +4,7 @@ https://xeno-canto.org/explore/api
 https://xeno-canto.org/help/search
 */
 
-export { fetchRecordings, fetchLevelInfo, fetchThemeInfo };
+export { fetchRecordings, fetchLevelInfo, fetchThemeInfo, fetchThemesInfo };
 
 /**
  * Asynchronously fetches recording(s) data for a bird and sends it into the provided function.
@@ -47,7 +47,9 @@ async function fetchLevelInfo(callback) {
 }
 
 /**
- * Asynchronously fetches theme info from themes.json file. Returns theme object.
+ * Asynchronously fetches a given theme info from themes.json file and
+ * passes the theme object to the callback function.
+ * @param {string} theme Theme to fetch data for.
  * @param {function} callback Function to receive the fetched data as a parameter.
  */
  async function fetchThemeInfo(theme, callback) {
@@ -55,9 +57,25 @@ async function fetchLevelInfo(callback) {
 
     if(response.ok) {
         let data = await response.json();
-        callback(data.filter(t => t.name === theme)[0]);
+        callback(data.filter(t => t.id === theme)[0]);
     } else {
         informFetchError(response, fetchThemeInfo);
+    }
+}
+
+/**
+ * Asynchronously fetches the entire theme info array from themes.json file
+ * and passes it to the callback function.
+ * @param {function} callback Function to receive the fetched data as a parameter.
+ */
+ async function fetchThemesInfo(callback) {
+    let response = await fetch('./data/themes.json');
+
+    if(response.ok) {
+        let data = await response.json();
+        callback(data);
+    } else {
+        informFetchError(response, fetchThemesInfo);
     }
 }
 
