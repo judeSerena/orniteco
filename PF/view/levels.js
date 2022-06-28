@@ -1,8 +1,14 @@
-import { selectLevel, getPoints, pointsNecessary } from '../controller/settings.js'
+import { selectLevel, getPoints, pointsNecessary, getLanguage } from '../controller/settings.js'
+import { fetchTextInfo } from '../data/fetch.js';
 
 // Retrieve the level buttons
 const levelsContainer = document.getElementsByClassName('lvl-nav')[0];
 const levels = levelsContainer.getElementsByTagName('div');
+// To translate
+const title = document.getElementsByTagName('h1')[0];
+const subtitle = document.getElementsByTagName('h2')[0];
+
+const language = getLanguage();
 
 levelsContainer.addEventListener('click', e => {
     if (e.target.tagName === 'A'){
@@ -10,6 +16,13 @@ levelsContainer.addEventListener('click', e => {
         selectLevel(parseInt(e.target.textContent) - 1);
     }
 });
+
+function translateTexts() {
+    fetchTextInfo('levels', (texts) => {
+        title.textContent = texts.title[language];
+        subtitle.textContent = texts.subtitle[language];
+    });
+}
 
 // Unblock levels >1 depending on the amount of points
 function unlockLevels() {
@@ -20,4 +33,5 @@ function unlockLevels() {
     }
 }
 
+translateTexts();
 unlockLevels();
