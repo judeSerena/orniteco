@@ -4,7 +4,7 @@ https://xeno-canto.org/explore/api
 https://xeno-canto.org/help/search
 */
 
-export { fetchRecordings, fetchLevelInfo, fetchThemeInfo, fetchThemesInfo, fetchAvailableLanguages };
+export { fetchRecordings, fetchLevelInfo, fetchThemeInfo, fetchThemesInfo, fetchAvailableLanguages, fetchTextInfo };
 
 /**
  * Asynchronously fetches recording(s) data for a bird and sends it into the provided function.
@@ -92,6 +92,22 @@ async function fetchLevelInfo(callback) {
         callback(data[0].languages);
     } else {
         informFetchError(response, fetchAvailableLanguages);
+    }
+}
+
+/**
+ * Asynchronously fetches text info from texts.json file. Returns a texts object for a given screen.
+ * @param {string} screen Screen (page) to fetch texts for.
+ * @param {function} callback Function to receive the fetched data as a parameter.
+ */
+ async function fetchTextInfo(screen, callback) {
+    let response = await fetch('./data/texts.json');
+
+    if(response.ok) {
+        let data = await response.json();
+        callback(data[0].screens[screen]);
+    } else {
+        informFetchError(response, fetchTextInfo);
     }
 }
 

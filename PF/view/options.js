@@ -1,13 +1,16 @@
-import { setTheme, getLanguage } from '../controller/settings.js'
-import { fetchThemesInfo, fetchAvailableLanguages } from '../data/fetch.js';
+import { setTheme, getLanguage, setLanguage } from '../controller/settings.js'
+import { fetchThemesInfo, fetchAvailableLanguages, fetchTextInfo } from '../data/fetch.js';
 import { applyTheme } from './applyTheme.js';
 
 // Retrieve DOM elements
 const form = document.getElementsByTagName('form')[0];
 const themeSelect = form.querySelector('select[name="theme"]');
 const languageSelect = form.querySelector('select[name="language"]');
+const title = document.getElementsByTagName('h1')[0];
+const themeText = form.querySelector('label[for="theme"]');
+const submitBtn = form.getElementsByTagName('button')[0];
 
-const language = getLanguage();
+let language = getLanguage();
 
 const fragment = new DocumentFragment();
 
@@ -40,13 +43,25 @@ function populateLanguages() {
     });
 };
 
+function translateTexts() {
+    fetchTextInfo('options', (texts) => {
+        title.textContent = texts.title[language];
+        themeText.textContent = texts.theme[language];
+        submitBtn.textContent = texts.save[language];
+        console.log(getLanguage());
+    });
+}
+
 populateThemes();
 populateLanguages();
 form.appendChild(fragment);
-
+translateTexts();
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     setTheme(themeSelect.value);
-    applyTheme(themeSelect.value)
+    applyTheme(themeSelect.value);
+    setLanguage(languageSelect.value);
+    language = getLanguage();
+    translateTexts();
 });
