@@ -190,6 +190,11 @@
     font-weight: bold;
 }
 
+.scientific-name {
+    font-size: 0.7em;
+    opacity: 0.5;
+}
+
 .title {
     font-size: 5em;
 }

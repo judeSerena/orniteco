@@ -26,7 +26,8 @@ const questionContainer = document.getElementsByClassName('question')[0];
 const audioElement = questionContainer.getElementsByTagName('audio')[0];
 const answerContainer = questionContainer.getElementsByClassName('answers')[0];
 const answerButtons = answerContainer.querySelectorAll('.answers a');
-const answerButtonsTexts = answerContainer.querySelectorAll('.answers a p');
+const answerButtonsCommonNames = answerContainer.querySelectorAll('.answers a .common-name');
+const answerButtonsScientificNames = answerContainer.querySelectorAll('.answers a .scientific-name');
 const answerButtonsImgs = answerContainer.querySelectorAll('.answers a img');
 
 function loadBackground(level) {
@@ -107,7 +108,8 @@ function drawQuestion(birdChoices) {
 
         // Load names and images into the answer buttons
         for(let i = 0; i < answerButtons.length; i++) {
-            answerButtonsTexts[choiceOrder[i]].textContent = birdChoices[i].name[language];
+            answerButtonsCommonNames[choiceOrder[i]].textContent = birdChoices[i].name[language];
+            answerButtonsScientificNames[choiceOrder[i]].textContent = birdChoices[i].name.sci;
             answerButtons[choiceOrder[i]].setAttribute('data-correct', i === 0 ? 'yes' : 'no');
             // Randomly choose 1 out of 2 possible images for each bird (files named "bird 1.jpg" and "bird 2.jpg")
             answerButtonsImgs[choiceOrder[i]].src = `./data/imgs/${birdChoices[i].name.sci} ${Math.floor(Math.random() * 2) + 1}.jpg`;
