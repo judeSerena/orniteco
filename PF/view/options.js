@@ -48,7 +48,6 @@ function translateTexts() {
         title.textContent = texts.title[language];
         themeText.textContent = texts.theme[language];
         submitBtn.textContent = texts.save[language];
-        console.log(getLanguage());
     });
 }
 
