@@ -1,7 +1,5 @@
 [
     {
-        "level": 0,
-        "necessaryExp": 0,
         "birds": [
             {
                 "name": {
@@ -31,8 +29,6 @@
     },
 
     {
-        "level": 1,
-        "necessaryExp": 10,
         "birds": [
             {
                 "name": {
@@ -62,8 +58,6 @@
     },
 
     {
-        "level": 2,
-        "necessaryExp": 30,
         "birds": [
             {
                 "name": {
@@ -93,8 +87,6 @@
     },
 
     {
-        "level": 3,
-        "necessaryExp": 60,
         "birds": [
             {
                 "name": {
@@ -124,8 +116,6 @@
     },
 
     {
-        "level": 4,
-        "necessaryExp": 100,
         "birds": [
             {
                 "name": {
