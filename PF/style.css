@@ -18,6 +18,16 @@
     padding: 0;
 }
 
+.about p {
+    text-align: center;
+    line-height: 2em;
+    max-width: 45em;
+}
+
+.about h1 {
+    margin-bottom: 0.2em;
+}
+
 .answers a {
     width: 35%;
     height: 15em;
