@@ -1,102 +1,115 @@
 [
     {
-        "index": {
-            "subtitle": {
-                "ca": "Aprèn a identificar ocells pel seu cant.",
-                "en": "Learn to identify birds by their song.",
-                "es": "Aprende a identificar pájaros por su canto."
+        "languages": {
+            "ca": "Català",
+            "en": "English",
+            "es": "Español"
+        },
+
+        "screens": {
+            "index": {
+                "subtitle": {
+                    "ca": "Aprèn a identificar ocells pel seu cant.",
+                    "en": "Learn to identify birds by their song.",
+                    "es": "Aprende a identificar pájaros por su canto."
+                },
+                "start": {
+                    "ca": "COMENÇA",
+                    "en": "START",
+                    "es": "EMPIEZA"
+                },
+                "about": {
+                    "ca": "SOBRE ORNITECO",
+                    "en": "ABOUT",
+                    "es": "SOBRE ORNITECO"
+                },
+                "options": {
+                    "ca": "OPCIONS",
+                    "en": "SETTINGS",
+                    "es": "OPCIONES"
+                }
             },
-            "start": {
-                "ca": "COMENÇA",
-                "en": "START",
-                "es": "EMPIEZA"
+    
+            "game": {
+                "title": {
+                    "ca": "Nivell",
+                    "en": "Level",
+                    "es": "Nivel"
+                },
+                "question": {
+                    "ca": "A quina espècie pertany aquest cant?",
+                    "en": "What species does this song belong to?",
+                    "es": "¿A qué especie pertenece este canto?"
+                },
+                "back": {
+                    "ca": "Enrere",
+                    "en": "Back",
+                    "es": "Atrás"
+                },
+                "options": {
+                    "ca": "Opcions",
+                    "en": "Settings",
+                    "es": "Opciones"
+                },
+                "points": {
+                    "ca": "Punts totals:",
+                    "en": "Total points:",
+                    "es": "Puntos totales:"
+                },
+                "nextLevel": {
+                    "ca": "Següent nivell:",
+                    "en": "Next level:",
+                    "es": "Siguiente nivel:"
+                },
+                "incorrect": {
+                    "ca": "La resposta correcta era",
+                    "en": "The correct answer was",
+                    "es": "La respuesta correcta era"
+                },
+                "correct": {
+                    "ca": "Correcte!",
+                    "en": "Correct!",
+                    "es": "¡Correcto!"
+                },
+                "next": {
+                    "ca": "Següent",
+                    "en": "Next",
+                    "es": "Siguiente"
+                }
             },
+    
             "about": {
-                "ca": "SOBRE ORNITECO",
-                "en": "ABOUT",
-                "es": "SOBRE ORNITECO"
+                "innerHtml": {
+                    "ca": "<h1 class=\"title\">Sobre OrnitecO</h1><p>OrnitecO és un quiz interactiu per a aprendre a identificar ocells pel seu cant.<br>Els ocells seleccionats són propis de les àrees urbanes i semi-urbanes de Catalunya, en concret de Barcelona.</p><p>Els àudios enllaçats a cada pregunta provenen del repositori col·laboratiu de grabacions <a href=\"https://xeno-canto.org/?language=ca\">xeno-canto</a> i són recuperats a través de l'<a href=\"https://xeno-canto.org/explore/api\">API gratuïta xeno-canto</a>. Aquesta API limita el número màxim de peticions a 1 per segon. Per tant, és possible que aquesta app no pugui generar nous àudios amb prou rapidesa si moltes persones la fan servir alhora.</p><p>OrnitecO ha sigut desenvolupat per <a href=\"#\">Squali</a> durant un curs de desenvolupament web front-end, sota la tutela del seu professor Albert Mata.</p><p>Visita el <a href=\"#\">repositori del projecte a Github</a>.</p>",
+                    "en": "<h1 class=\"title\">About OrnitecO</h1><p>OrnitecO is an interactive quiz to learn to identify birds by their song.<br>The birds selected are common to the urban and semi-urban areas of Catalonia, specially of Barcelona.</p><p>The audios linked in each question are provided by the collaborative recording repository <a href=\"https://xeno-canto.org/?language=en\">xeno-canto</a> and are fetched through the<a href=\"https://xeno-canto.org/explore/api\">free xeno-canto API</a>. This API has a request rate limit of 1 per second. Therefore, it is possible that this app could not generate new audios fast enough if many people are using it at the same time.</p><p>OrnitecO was developed by <a href=\"#\">Squali</a> during a front-end web development course, under guidance of his teacher Albert Mata.</p><p>Visit the <a href=\"#\">project's repository at Github</a>.</p>",
+                    "es": "<h1 class=\"title\">Sobre OrnitecO</h1><p>OrnitecO es un quiz interactivo para aprender a identificar pájaros por su canto.<br>Los pájaros seleccionados son propios de las áreas urbanas y semi-urbanas de Cataluña, en concreto de Barcelona.</p><p>Los audios enlazados en cada pregunta provienen del repositorio colaborativo de grabaciones <a href=\"https://xeno-canto.org/?language=es\">xeno-canto</a> y son recuperadas a través de la <a href=\"https://xeno-canto.org/explore/api\">API gratuita xeno-canto</a>. Esta API limita el número máximo de peticiones a 1 por segundo. Por lo tanto, es posible que esta app no pueda generar audios con suficiente rapidez si muchas personas la usan a la vez.</p><p>OrnitecO ha sido desarrollado por <a href=\"#\">Squali</a> durante un curso de desarrollo web front-end, bajo la tutela de su profesor Albert Mata.</p><p>Visita el <a href=\"#\">repositorio del proyecto en Github</a>.</p>"
+                }
             },
+    
+            "levels": {
+                "title": {
+                    "ca": "Nivells",
+                    "en": "Levels",
+                    "es": "Niveles"
+                },
+                "subtitle": {
+                    "ca": "Selecciona un nivell.",
+                    "en": "Select a level.",
+                    "es": "Selecciona un nivel."
+                }
+            },
+    
             "options": {
-                "ca": "OPCIONS",
-                "en": "SETTINGS",
-                "es": "OPCIONES"
-            }
-        },
-
-        "game": {
-            "title": {
-                "ca": "Nivell",
-                "en": "Level",
-                "es": "Nivel"
-            },
-            "question": {
-                "ca": "A quina espècie pertany aquest cant?",
-                "en": "What species does this song belong to?",
-                "es": "¿A qué especie pertenece este canto?"
-            },
-            "back": {
-                "ca": "Enrere",
-                "en": "Back",
-                "es": "Atrás"
-            },
-            "options": {
-                "ca": "Opcions",
-                "en": "Settings",
-                "es": "Opciones"
-            },
-            "points": {
-                "ca": "Punts totals:",
-                "en": "Total points:",
-                "es": "Puntos totales:"
-            },
-            "nextLevel": {
-                "ca": "Següent nivell:",
-                "en": "Next level:",
-                "es": "Siguiente nivel:"
-            },
-            "incorrect": {
-                "ca": "La resposta correcta era",
-                "en": "The correct answer was",
-                "es": "La respuesta correcta era"
-            },
-            "correct": {
-                "ca": "Correcte!",
-                "en": "Correct!",
-                "es": "¡Correcto!"
-            },
-            "next": {
-                "ca": "Següent",
-                "en": "Next",
-                "es": "Siguiente"
-            }
-        },
-
-        "about": {
-            "innerHtml": {
-                "ca": "<h1 class=\"title\">Sobre OrnitecO</h1><p>OrnitecO és un quiz interactiu per a aprendre a identificar ocells pel seu cant.<br>Els ocells seleccionats són propis de les àrees urbanes i semi-urbanes de Catalunya, en concret de Barcelona.</p><p>Els àudios enllaçats a cada pregunta provenen del repositori col·laboratiu de grabacions <a href=\"https://xeno-canto.org/?language=ca\">xeno-canto</a> i són recuperats a través de l'<a href=\"https://xeno-canto.org/explore/api\">API gratuïta xeno-canto</a>. Aquesta API limita el número màxim de peticions a 1 per segon. Per tant, és possible que aquesta app no pugui generar nous àudios amb prou rapidesa si moltes persones la fan servir alhora.</p><p>OrnitecO ha sigut desenvolupat per <a href=\"#\">Squali</a> durant un curs de desenvolupament web front-end, sota la tutela del seu professor Albert Mata.</p><p>Visita el <a href=\"#\">repositori del projecte a Github</a>.</p>",
-                "en": "<h1 class=\"title\">About OrnitecO</h1><p>OrnitecO is an interactive quiz to learn to identify birds by their song.<br>The birds selected are common to the urban and semi-urban areas of Catalonia, specially of Barcelona.</p><p>The audios linked in each question are provided by the collaborative recording repository <a href=\"https://xeno-canto.org/?language=en\">xeno-canto</a> and are fetched through the<a href=\"https://xeno-canto.org/explore/api\">free xeno-canto API</a>. This API has a request rate limit of 1 per second. Therefore, it is possible that this app could not generate new audios fast enough if many people are using it at the same time.</p><p>OrnitecO was developed by <a href=\"#\">Squali</a> during a front-end web development course, under guidance of his teacher Albert Mata.</p><p>Visit the <a href=\"#\">project's repository at Github</a>.</p>",
-                "es": "<h1 class=\"title\">Sobre OrnitecO</h1><p>OrnitecO es un quiz interactivo para aprender a identificar pájaros por su canto.<br>Los pájaros seleccionados son propios de las áreas urbanas y semi-urbanas de Cataluña, en concreto de Barcelona.</p><p>Los audios enlazados en cada pregunta provienen del repositorio colaborativo de grabaciones <a href=\"https://xeno-canto.org/?language=es\">xeno-canto</a> y son recuperadas a través de la <a href=\"https://xeno-canto.org/explore/api\">API gratuita xeno-canto</a>. Esta API limita el número máximo de peticiones a 1 por segundo. Por lo tanto, es posible que esta app no pueda generar audios con suficiente rapidez si muchas personas la usan a la vez.</p><p>OrnitecO ha sido desarrollado por <a href=\"#\">Squali</a> durante un curso de desarrollo web front-end, bajo la tutela de su profesor Albert Mata.</p><p>Visita el <a href=\"#\">repositorio del proyecto en Github</a>.</p>"
-            }
-        },
-
-        "levels": {
-            "title": {
-                "ca": "Nivells",
-                "en": "Levels",
-                "es": "Niveles"
-            },
-            "subtitle": {
-                "ca": "Selecciona un nivell.",
-                "en": "Select a level.",
-                "es": "Selecciona un nivel."
-            }
-        },
-
-        "options": {
-            "theme": {
-                "ca": "Tema",
-                "en": "Theme",
-                "es": "Tema"
+                "theme": {
+                    "ca": "Tema",
+                    "en": "Theme",
+                    "es": "Tema"
+                },
+                "save": {
+                    "ca": "Guarda",
+                    "en": "Save",
+                    "es": "Guarda"
+                }
             }
         }
     }
