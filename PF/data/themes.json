@@ -1,6 +1,11 @@
 [
     {
-        "name": "light",
+        "id": "light",
+        "name": {
+            "ca": "Clar",
+            "en": "Light",
+            "es": "Claro"
+        },
         "colors": {
             "--background": "#dcdedd",
 	        "--lighter": "#fff4",
@@ -15,7 +20,12 @@
     },
 
     {
-        "name": "dark",
+        "id": "dark",
+        "name": {
+            "ca": "Fosc",
+            "en": "Dark",
+            "es": "Oscuro"
+        },
         "colors": {
             "--background": "#2a302c",
 	        "--lighter": "#39423844",
@@ -30,7 +40,12 @@
     },
 
     {
-        "name": "highContrast",
+        "id": "highContrastLight",
+        "name": {
+            "ca": "Clar en alt contrast",
+            "en": "Light high contrast",
+            "es": "Claro en alto constraste"
+        },
         "colors": {
             "--background": "#fff",
 	        "--lighter": "#8c8c8c",
@@ -39,6 +54,26 @@
 	        "--text": "#000",
 	        "--titles": "#000",
 	        "--links": "#098a00",
+
+            "--hoverFilter": "0.5"
+        }
+    },
+
+    {
+        "id": "highContrastDark",
+        "name": {
+            "ca": "Fosc en alt contrast",
+            "en": "Dark high contrast",
+            "es": "Oscuro en alto constraste"
+        },
+        "colors": {
+            "--background": "#000",
+	        "--lighter": "#8c8c8c",
+	        "--shine": "#8c8c8c",
+	        "--shadow": "#000",
+	        "--text": "#fff",
+	        "--titles": "#fff",
+	        "--links": "#11ff00",
 
             "--hoverFilter": "0.5"
         }
