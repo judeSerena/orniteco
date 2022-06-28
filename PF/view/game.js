@@ -1,6 +1,6 @@
 import { genQuestionCandidates } from '../controller/genQuestionCandidates.js';
-import { fetchRecordings } from '../data/fetch.js'
-import { sumPoints, getPoints, pointsNecessary, getSelectedLevel } from '../controller/settings.js';
+import { fetchRecordings, fetchTextInfo } from '../data/fetch.js'
+import { sumPoints, getPoints, pointsNecessary, getSelectedLevel, getLanguage } from '../controller/settings.js';
 
 // Settings for recording fetching.
 ////////////////////////////////////////////////// TO-DO: make settings editable by user?
@@ -8,7 +8,7 @@ import { sumPoints, getPoints, pointsNecessary, getSelectedLevel } from '../cont
 const minQuality = 'c';
 const minDuration = 5;
 const maxDuration = 10;
-const language = 'ca';
+const language = getLanguage();
 const level = getSelectedLevel();
 const pointsPerCorrectAnswer = 10;
 let correctOption = '';
@@ -16,11 +16,9 @@ let correctOption = '';
 // Retrieve DOM elements
 const pointBar = document.getElementsByClassName('point-bar')[0];
 const pointTotal = document.getElementsByClassName('point-total')[0];
-const levelTitle = document.querySelector('header h2');
 
 const feedbackBar = document.getElementById('feedbackBar');
 const feedbackMessage = feedbackBar.getElementsByTagName('p')[0];
-const nextQuestionBtn = feedbackBar.getElementsByTagName('a')[0];
 
 const questionContainer = document.getElementsByClassName('question')[0];
 const audioElement = questionContainer.getElementsByTagName('audio')[0];
@@ -29,6 +27,32 @@ const answerButtons = answerContainer.querySelectorAll('.answers a');
 const answerButtonsCommonNames = answerContainer.querySelectorAll('.answers a .common-name');
 const answerButtonsScientificNames = answerContainer.querySelectorAll('.answers a .scientific-name');
 const answerButtonsImgs = answerContainer.querySelectorAll('.answers a img');
+
+// To translate
+const title = document.querySelector('header h2');
+const question = document.querySelector('main p:first-child');
+const back = document.querySelector('.game-top-bar ul li:nth-child(1) a');
+const settings = document.querySelector('.game-top-bar ul li:nth-child(2) a');
+const points = document.querySelector('.game-top-bar p:nth-of-type(1)');
+const nextLevel = document.querySelector('.game-top-bar p:nth-of-type(3)');
+const nextQuestionBtn = feedbackBar.getElementsByTagName('a')[0];
+/* These need to be editable later: we want to make a single fetch of the translation and store the
+result, instead of fetching the text each time we run the feedback functions */
+let incorrectText, correctText;
+
+function translateTexts() {
+    fetchTextInfo('game', (texts) => {
+        title.textContent = `${texts.title[language]} ${level + 1}`;
+        question.textContent = texts.question[language];
+        back.textContent = texts.back[language];
+        settings.textContent = texts.settings[language];
+        points.textContent = texts.points[language];
+        nextLevel.textContent = texts.nextLevel[language];
+        nextQuestionBtn.textContent = texts.next[language];
+        incorrectText = texts.incorrect[language];
+        correctText = texts.correct[language];
+    });
+}
 
 function loadBackground(level) {
     // Background images must be saved with 0.2 opacity and named starting with index 0
@@ -118,14 +142,14 @@ function drawQuestion(birdChoices) {
 }
 
 function correctFeedback() {
-    feedbackMessage.innerHTML = 'Correcte!';
+    feedbackMessage.innerHTML = correctText;
     nextQuestionBtn.hidden = false;
     document.body.className = 'correct';
     questionContainer.classList.add('correct');
 }
 
 function incorrectFeedback() {
-    feedbackMessage.innerHTML = `La resposta correcta era <b>${correctOption}</b>.`;
+    feedbackMessage.innerHTML = `${incorrectText} <b>${correctOption}</b>.`;
     nextQuestionBtn.hidden = false;
     document.body.className = 'incorrect';
     questionContainer.classList.add('incorrect');
@@ -133,7 +157,6 @@ function incorrectFeedback() {
 
 function givePoints() {
     if (getPoints() + pointsPerCorrectAnswer <= pointsNecessary(level + 1)) {
-        feedbackMessage.innerHTML += ' +10 punts.';
         sumPoints(10);
         redrawPoints();
     }
@@ -169,6 +192,6 @@ nextQuestionBtn.addEventListener('click', () => {
     genQuestionCandidates(level, drawQuestion);
 });
 
-levelTitle.textContent = `Nivell ${level + 1}`
 genQuestionCandidates(level, drawQuestion);
+translateTexts();
 redrawPoints();

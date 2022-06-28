@@ -23,7 +23,7 @@
                     "en": "ABOUT",
                     "es": "SOBRE ORNITECO"
                 },
-                "options": {
+                "settings": {
                     "ca": "OPCIONS",
                     "en": "SETTINGS",
                     "es": "OPCIONES"
@@ -42,11 +42,11 @@
                     "es": "¿A qué especie pertenece este canto?"
                 },
                 "back": {
-                    "ca": "Enrere",
-                    "en": "Back",
-                    "es": "Atrás"
+                    "ca": "🡄 Enrere",
+                    "en": "🡄 Back",
+                    "es": "🡄 Atrás"
                 },
-                "options": {
+                "settings": {
                     "ca": "Opcions",
                     "en": "Settings",
                     "es": "Opciones"
