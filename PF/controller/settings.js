@@ -24,6 +24,9 @@ function pointsNecessary(level) {
     return level * (50 * level);
 }
 
+
+// ---------------------- Editable by user ----------------------
+
 function setTheme(theme) {
     localStorage.setItem('theme', theme);
 }
@@ -31,6 +34,15 @@ function setTheme(theme) {
 function getTheme() {
     const theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
     return theme;
+}
+
+function setLanguage(language) {
+    localStorage.setItem('language', language);
+}
+
+function getLanguage() {
+    const language = localStorage.getItem('language') ? localStorage.getItem('language') : 'ca';
+    return language;
 }
 
 
@@ -41,5 +53,7 @@ export {
     getPoints,
     pointsNecessary,
     setTheme,
-    getTheme
+    getTheme,
+    setLanguage,
+    getLanguage
 };
