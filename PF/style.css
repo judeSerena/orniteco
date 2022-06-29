@@ -256,6 +256,12 @@ h2 {
     text-align: center;
 }
 
+noscript.neumorphic {
+    background-color: #ff000010;
+    padding: 1em;
+    font-weight: bold;
+}
+
 select {
     padding: 0.5em;
     margin: 0 1em 2em 1em;
