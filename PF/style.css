@@ -13,6 +13,16 @@
     --hoverFilter: 0.9;
 }
 
+::-moz-selection {
+    color: var(--shine);
+    background: var(--links);
+}
+
+::selection {
+    color: var(--shine);
+    background: var(--links);
+}
+
 * {
     margin: 0;
     padding: 0;
