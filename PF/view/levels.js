@@ -1,12 +1,13 @@
 import { selectLevel, getPoints, pointsNecessary, getLanguage } from '../controller/settings.js'
-import { fetchTextInfo } from '../data/fetch.js';
+import { fetchLevelInfo, fetchTextInfo } from '../data/fetch.js';
 
 // Retrieve the level buttons
 const levelsContainer = document.getElementsByClassName('lvl-nav')[0];
-const levels = levelsContainer.getElementsByTagName('div');
 // To translate
 const title = document.getElementsByTagName('h1')[0];
 const subtitle = document.getElementsByTagName('h2')[0];
+
+const fragment = new DocumentFragment();
 
 const language = getLanguage();
 
@@ -24,14 +25,31 @@ function translateTexts() {
     });
 }
 
-// Unblock levels >1 depending on the amount of points
-function unlockLevels() {
-    for (let i = 0; i < levels.length; i++) {
-        if(getPoints() >= pointsNecessary(i)) {
-            levels[i].classList.remove('disabledLink');
+
+// Populate the level <nav> with as many levels as available in levels.json
+function populateLevels() {
+    // Fetch the level array
+    fetchLevelInfo((levels) => {
+        for(let i = 0; i < levels.length; i++) {
+            const div = document.createElement('div');
+            div.classList.add('neumorphic');
+            div.classList.add('btn');
+            
+            if(getPoints() <= pointsNecessary(i)) { div.classList.add('disabledLink'); }
+
+            const link = document.createElement('a');
+            link.classList.add('title');
+            link.href = "./game.html";
+            link.textContent = i + 1;
+
+            div.appendChild(link);
+            levelsContainer.appendChild(div);
         }
-    }
-}
+
+        document.appendChild(fragment);
+    });
+};
+
 
 translateTexts();
-unlockLevels();
+populateLevels();
