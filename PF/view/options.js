@@ -1,4 +1,4 @@
-import { setTheme, getLanguage, setLanguage } from '../controller/settings.js'
+import { setTheme, getLanguage, setLanguage, getTheme } from '../controller/settings.js'
 import { fetchThemesInfo, fetchAvailableLanguages, fetchTextInfo } from '../data/fetch.js';
 import { applyTheme } from './applyTheme.js';
 
@@ -24,6 +24,10 @@ function populateThemes() {
             const option = document.createElement('option');
             option.value = theme.id;
             option.textContent = theme.name[language];
+
+            // If this is the option that the user saved last time, show it already selected
+            if (getTheme() === theme.id) { option.selected = true; }
+
             themeSelect.appendChild(option);
         })
     });
@@ -39,6 +43,10 @@ function populateLanguages() {
             const option = document.createElement('option');
             option.value = languageCodes[i];
             option.textContent = languageNames[i];
+
+            // If this is the option that the user saved last time, show it already selected
+            if (getLanguage() === languageCodes[i]) { option.selected = true; }
+
             languageSelect.appendChild(option);
         }
     });
