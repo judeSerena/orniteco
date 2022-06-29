@@ -223,7 +223,8 @@ a:hover {
     color: var(--text);
 }
 
-a.neumorphic:hover {
+a.neumorphic:hover,
+button.neumorphic:hover {
     filter: brightness(var(--hoverFilter));
 }
 
@@ -238,10 +239,27 @@ body {
     background-size: cover;
 }
 
+button {
+    border: none;
+}
+
+form {
+    display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    height: 50%
+}
+
 h1,
 h2 {
     color: var(--titles);
     text-align: center;
+}
+
+select {
+    padding: 0.5em;
+    margin: 0 1em 2em 1em;
+    border: none;
 }
 
 svg.logo {
