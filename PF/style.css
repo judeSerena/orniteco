@@ -138,7 +138,8 @@
 }
 
 .logo {
-    font-size: 8em;
+    font-size: 7em;
+    vertical-align: middle;
 }
 
 .lvl-nav {
@@ -243,6 +244,15 @@ h2 {
     text-align: center;
 }
 
+svg.logo {
+    display: inline;
+    fill: none;
+    stroke-width: 0.035em;
+    stroke: var(--titles);
+    height: 1em;
+    width: 1em;
+}
+
 @keyframes point-bar-glow {
     from {
         background-color:  var(--shine);
@@ -263,9 +273,23 @@ h2 {
     }
 }
 
-@media (max-width: 700px){
+@media (max-width: 1100px){
+    .logo {
+        font-size: 5.5em;
+    }
+
+    svg.logo {
+        stroke-width: 0.045em;
+    }
+}
+
+@media (max-width: 800px){
     .logo {
         font-size: 5em;
+    }
+
+    svg.logo {
+        stroke-width: 0.06em;
     }
 
     .title {
