@@ -28,6 +28,11 @@
     padding: 0;
 }
 
+*:focus {
+    outline: 5px solid var(--links);
+    border-radius: var(--borderRadius);
+}
+
 .about p {
     text-align: center;
     line-height: 2em;
