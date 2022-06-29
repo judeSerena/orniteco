@@ -54,6 +54,10 @@
     border-top-right-radius: var(--borderRadius);
 }
 
+.back {
+    align-self: flex-start;
+}
+
 .big-btn {
     width: 95%;
     font-size: xx-large;

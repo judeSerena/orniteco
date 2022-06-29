@@ -6,6 +6,7 @@ const levelsContainer = document.getElementsByClassName('lvl-nav')[0];
 // To translate
 const title = document.getElementsByTagName('h1')[0];
 const subtitle = document.getElementsByTagName('h2')[0];
+const back = document.getElementsByClassName('back')[0];
 
 const fragment = new DocumentFragment();
 
@@ -22,6 +23,7 @@ function translateTexts() {
     fetchTextInfo('levels', (texts) => {
         title.textContent = texts.title[language];
         subtitle.textContent = texts.subtitle[language];
+        back.textContent = texts.back[language];
     });
 }
 

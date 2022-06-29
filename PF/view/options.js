@@ -9,6 +9,7 @@ const languageSelect = form.querySelector('select[name="language"]');
 const title = document.getElementsByTagName('h1')[0];
 const themeText = form.querySelector('label[for="theme"]');
 const submitBtn = form.getElementsByTagName('button')[0];
+const back = document.getElementsByClassName('back')[0];
 
 let language = getLanguage();
 
@@ -48,6 +49,7 @@ function translateTexts() {
         title.textContent = texts.title[language];
         themeText.textContent = texts.theme[language];
         submitBtn.textContent = texts.save[language];
+        back.textContent = texts.back[language];
     });
 }
 
