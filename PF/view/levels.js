@@ -37,7 +37,9 @@ function populateLevels() {
             div.classList.add('neumorphic');
             div.classList.add('btn');
             
-            if(getPoints() <= pointsNecessary(i)) { div.classList.add('disabledLink'); }
+            if(getPoints() < pointsNecessary(i)) { div.classList.add('disabledLink'); }
+            console.log(getPoints());
+            console.log(pointsNecessary(i));
 
             const link = document.createElement('a');
             link.classList.add('title');
