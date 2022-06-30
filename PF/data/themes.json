@@ -4,7 +4,8 @@
         "name": {
             "ca": "Clar",
             "en": "Light",
-            "es": "Claro"
+            "es": "Claro",
+            "tokiPona": "walo"
         },
         "colors": {
             "--background": "#dcdedd",
@@ -24,7 +25,8 @@
         "name": {
             "ca": "Fosc",
             "en": "Dark",
-            "es": "Oscuro"
+            "es": "Oscuro",
+            "tokiPona": "pimeja"
         },
         "colors": {
             "--background": "#2a302c",
@@ -44,7 +46,8 @@
         "name": {
             "ca": "Clar en alt contrast",
             "en": "Light high contrast",
-            "es": "Claro en alto constraste"
+            "es": "Claro en alto constraste",
+            "tokiPona": "walo wawa tawa lukin ike"
         },
         "colors": {
             "--background": "#fff",
@@ -64,7 +67,8 @@
         "name": {
             "ca": "Fosc en alt contrast",
             "en": "Dark high contrast",
-            "es": "Oscuro en alto constraste"
+            "es": "Oscuro en alto constraste",
+            "tokiPona": "pimeja wawa tawa lukin ike"
         },
         "colors": {
             "--background": "#000",

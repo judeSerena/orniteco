@@ -6,7 +6,8 @@
                     "sci": "Columba livia",
                     "ca": "Colom roquer",
                     "es": "Paloma bravía",
-                    "en": "Rock pigeon"
+                    "en": "Rock pigeon",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -14,7 +15,8 @@
                     "sci": "Streptopelia decaocto",
                     "ca": "Tórtora turca",
                     "es": "Tórtola turca",
-                    "en": "Eurasian collared dove"
+                    "en": "Eurasian collared dove",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -22,7 +24,8 @@
                     "sci": "Columba palumbus",
                     "ca": "Tudó",
                     "es": "Paloma torcaz",
-                    "en": "Common wood pigeon"
+                    "en": "Common wood pigeon",
+                    "tokiPona": "waso"
                 }
             }
         ]
@@ -35,7 +38,8 @@
                     "sci": "Passer domesticus",
                     "ca": "Pardal",
                     "es": "Gorrión común",
-                    "en": "House sparrow"
+                    "en": "House sparrow",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -43,7 +47,8 @@
                     "sci": "Myiopsitta monachus",
                     "ca": "Cotorreta pitgrisa",
                     "es": "Cotorra argentina",
-                    "en": "Monk parakeet"
+                    "en": "Monk parakeet",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -51,7 +56,8 @@
                     "sci": "Psittacula krameri",
                     "ca": "Cotorra de Kramer",
                     "es": "Cotorra de Kramer",
-                    "en": "Rose-ringed parakeet"
+                    "en": "Rose-ringed parakeet",
+                    "tokiPona": "waso"
                 }
             }
         ]
@@ -64,7 +70,8 @@
                     "sci": "Pica pica",
                     "ca": "Garsa eurasiàtica",
                     "es": "Urraca común",
-                    "en": "Eurasian magpie"
+                    "en": "Eurasian magpie",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -72,7 +79,8 @@
                     "sci": "Larus michahellis",
                     "ca": "Gavià argentat de potes grogues",
                     "es": "Gaviota patiamarilla",
-                    "en": "Yellow-legged gull"
+                    "en": "Yellow-legged gull",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -80,7 +88,8 @@
                     "sci": "Cyanistes caeruleus",
                     "ca": "Mallerenga blava",
                     "es": "Herrerillo común",
-                    "en": "Eurasian blue tit"
+                    "en": "Eurasian blue tit",
+                    "tokiPona": "waso"
                 }
             }
         ]
@@ -93,7 +102,8 @@
                     "sci": "Apus apus",
                     "ca": "Falcillot negre",
                     "es": "Vencejo común",
-                    "en": "Common swift"
+                    "en": "Common swift",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -101,7 +111,8 @@
                     "sci": "Parus major",
                     "ca": "Mallerenga carbonera",
                     "es": "Carbonero común",
-                    "en": "Great tit"
+                    "en": "Great tit",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -109,7 +120,8 @@
                     "sci": "Chloris chloris",
                     "ca": "Verderol comú",
                     "es": "Verderón común",
-                    "en": "European greenfinch"
+                    "en": "European greenfinch",
+                    "tokiPona": "waso"
                 }
             }
         ]
@@ -122,7 +134,8 @@
                     "sci": "Sturnus vulgaris",
                     "ca": "Estornell vulgar",
                     "es": "Estornino pinto",
-                    "en": "Common starling"
+                    "en": "Common starling",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -130,7 +143,8 @@
                     "sci": "Sturnus unicolor",
                     "ca": "Estornell negre",
                     "es": "Estornino negro",
-                    "en": "Spotless starling"
+                    "en": "Spotless starling",
+                    "tokiPona": "waso"
                 }
             },
             {
@@ -138,7 +152,8 @@
                     "sci": "Turdus merula",
                     "ca": "Merla",
                     "es": "Mirlo común",
-                    "en": "Common blackbird"
+                    "en": "Common blackbird",
+                    "tokiPona": "waso"
                 }
             }
         ]
