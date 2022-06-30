@@ -16,7 +16,7 @@
             <p>Javascript es necesario para disfrutar de OrnitecO. Tu navegador no lo soporta, o está deshabilitado.</p>
         </noscript>
 
-        <header>
+        <header class="unselectable">
             <div class="game-top-bar flex-center-row">
                 <ul>
                     <li><a href="./levels.html">🡄 Enrere</a></li>
@@ -33,33 +33,33 @@
         </header>
 
         <main class="question flex-center-column neumorphic">
-            <p>A quina espècie pertany aquest cant?</p>
-            <audio controls class="neumorphic">
+            <p class="unselectable">A quina espècie pertany aquest cant?</p>
+            <audio class="unselectable" controls class="neumorphic">
                 <source src="" type="audio/mpeg">
                 El teu navegador no soporta audio incrustat amb HTML5.
             </audio>
 
             <div class="answers flex-center-row">
-                <a class="neumorphic btn" data-correct='no'>
-                    <img>
+                <a class="neumorphic btn flex-center-column" data-correct='no'>
+                    <img class="unselectable">
                     <p class="common-name"></p>
                     <p class="scientific-name"></p>
                 </a>
-                <a class="neumorphic btn" data-correct='no'>
-                    <img>
+                <a class="neumorphic btn flex-center-column" data-correct='no'>
+                    <img class="unselectable">
                     <p class="common-name"></p>
                     <p class="scientific-name"></p>
                 </a>
-                <a class="neumorphic btn" data-correct='no'>
-                    <img>
+                <a class="neumorphic btn flex-center-column" data-correct='no'>
+                    <img class="unselectable">
                     <p class="common-name"></p>
                     <p class="scientific-name"></p>
                 </a>
             </div>
 
             <div id="feedbackBar" class="flex-center-column">
-                <p></p>
-                <a hidden class="neumorphic btn">Següent</a>
+                <p class="unselectable"></p>
+                <a hidden class="neumorphic btn unselectable">Següent</a>
             </div>
         </main>
     </body>

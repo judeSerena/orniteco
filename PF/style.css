@@ -41,17 +41,19 @@
 .answers a {
     width: 35%;
     height: 15em;
-    padding: 0;
+    padding: 0 0 0.2em 0;
     transition:
-        filter 0.2s,
+        filter 0.2s;
 }
 
 .answers img {
     width: 100%;
-    height: 80%;
+    height: 100%;
+    align-self: flex-start;
     object-fit: cover;
     border-top-left-radius: var(--borderRadius);
     border-top-right-radius: var(--borderRadius);
+    margin: 0 0 0.2em 0;
 }
 
 .back {
@@ -99,6 +101,12 @@
 
 .question audio {
     margin: 1em;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #feedbackBar {
