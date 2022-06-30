@@ -41,7 +41,7 @@
 .answers a {
     width: 35%;
     height: 15em;
-    padding: 0 0 0.2em 0;
+    padding: 0 0 0.6em 0;
     transition:
         filter 0.2s;
 }
@@ -53,7 +53,7 @@
     object-fit: cover;
     border-top-left-radius: var(--borderRadius);
     border-top-right-radius: var(--borderRadius);
-    margin: 0 0 0.2em 0;
+    margin: 0 0 0.5em 0;
 }
 
 .back {
