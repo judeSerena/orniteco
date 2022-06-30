@@ -174,7 +174,7 @@ function incorrectAnswer() {
 }
 
 answerContainer.addEventListener('click', e => {
-    if (e.target.tagName !== 'div'){
+    if (e.target.tagName !== 'DIV'){
         /* Correct choice button is the one at index 0.
         There are both a <p> and an <img> inside of a <a>, but only the <a> has the attribute
         data-correct, so if we want to be able to click on <p> or <img> and get the feedback as
