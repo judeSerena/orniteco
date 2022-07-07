@@ -278,6 +278,11 @@ h2 {
     text-align: center;
 }
 
+:focus-visible {
+    outline: 0.5em solid var(--links);
+    border-radius: var(--borderRadius);
+}
+
 noscript.neumorphic {
     background-color: #ff000010;
     padding: 1em;
