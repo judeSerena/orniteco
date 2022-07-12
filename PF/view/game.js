@@ -23,10 +23,10 @@ const feedbackMessage = feedbackBar.getElementsByTagName('p')[0];
 const questionContainer = document.getElementsByClassName('question')[0];
 const audioElement = questionContainer.getElementsByTagName('audio')[0];
 const answerContainer = questionContainer.getElementsByClassName('answers')[0];
-const answerButtons = answerContainer.querySelectorAll('.answers a');
-const answerButtonsCommonNames = answerContainer.querySelectorAll('.answers a .common-name');
-const answerButtonsScientificNames = answerContainer.querySelectorAll('.answers a .scientific-name');
-const answerButtonsImgs = answerContainer.querySelectorAll('.answers a img');
+const answerButtons = answerContainer.querySelectorAll('.answers button');
+const answerButtonsCommonNames = answerContainer.querySelectorAll('.answers button .common-name');
+const answerButtonsScientificNames = answerContainer.querySelectorAll('.answers button .scientific-name');
+const answerButtonsImgs = answerContainer.querySelectorAll('.answers button img');
 
 // To translate
 const title = document.querySelector('header h2');
@@ -35,7 +35,7 @@ const back = document.querySelector('.game-top-bar ul li:nth-child(1) a');
 const settings = document.querySelector('.game-top-bar ul li:nth-child(2) a');
 const points = document.querySelector('.game-top-bar p:nth-of-type(1)');
 const nextLevel = document.querySelector('.game-top-bar p:nth-of-type(3)');
-const nextQuestionBtn = feedbackBar.getElementsByTagName('a')[0];
+const nextQuestionBtn = feedbackBar.getElementsByTagName('button')[0];
 /* These need to be editable later: we want to make a single fetch of the translation and store the
 result, instead of fetching the text each time we run the feedback functions */
 let incorrectText, correctText;
@@ -99,10 +99,12 @@ function changeAnswerClickability(on) {
     if (on === true) {
         for (const button of answerButtons) {
             button.classList.remove('disabledLink');
+            button.disabled = false;
         }
     } else {
         for (const button of answerButtons) {
             button.classList.add('disabledLink');
+            button.disabled = true;
         }
     }
 }
