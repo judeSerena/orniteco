@@ -241,12 +241,14 @@ a {
         color 0.2s;
 }
 
-a:hover {
+a:hover,
+a:focus-visible {
     color: var(--text);
 }
 
 a.neumorphic:hover,
-button.neumorphic:hover {
+button.neumorphic:hover,
+:focus-visible {
     filter: brightness(var(--hoverFilter));
 }
 
@@ -265,6 +267,11 @@ button {
     border: none;
 }
 
+:focus-visible {
+    outline: 0.6rem solid var(--links);
+    border-radius: var(--borderRadius);
+}
+
 form {
     display: flex;
         flex-direction: column;
@@ -276,11 +283,6 @@ h1,
 h2 {
     color: var(--titles);
     text-align: center;
-}
-
-:focus-visible {
-    outline: 0.5em solid var(--links);
-    border-radius: var(--borderRadius);
 }
 
 noscript.neumorphic {
