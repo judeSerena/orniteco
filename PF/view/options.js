@@ -66,11 +66,14 @@ populateLanguages();
 form.appendChild(fragment);
 translateTexts();
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    setTheme(themeSelect.value);
-    applyTheme(themeSelect.value);
+themeSelect.addEventListener('change', (e) => {
+    console.log(e.target.value);
+    setTheme(e.target.value);
+    applyTheme(e.target.value);
+});
+
+languageSelect.addEventListener('change', (e) => {
     setLanguage(languageSelect.value);
     language = getLanguage();
     translateTexts();
-});
+})
