@@ -33,21 +33,19 @@ function populateLevels() {
     // Fetch the level array
     fetchLevelInfo((levels) => {
         for(let i = 0; i < levels.length; i++) {
-            const div = document.createElement('div');
-            div.classList.add('neumorphic');
-            div.classList.add('btn');
-            
-            if(getPoints() < pointsNecessary(i)) { div.classList.add('disabledLink'); }
-            console.log(getPoints());
-            console.log(pointsNecessary(i));
-
             const link = document.createElement('a');
+            link.classList.add('neumorphic');
+            link.classList.add('btn');
             link.classList.add('title');
-            link.href = "./game.html";
-            link.textContent = i + 1;
+            link.href = "game.html";
+            link.textContent = i + 1;            
 
-            div.appendChild(link);
-            levelsContainer.appendChild(div);
+            if(getPoints() < pointsNecessary(i)) {
+                link.classList.add('disabledLink');
+                link.tabIndex = -1; // Makes it unfocusable with keyboard
+            }
+
+            levelsContainer.appendChild(link);
         }
 
         document.appendChild(fragment);

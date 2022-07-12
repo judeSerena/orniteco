@@ -129,7 +129,7 @@
 
 .neumorphic.disabledLink {
     background-color: var(--background);
-    background-image: repeating-linear-gradient(-45deg, transparent, transparent 0.2em, var(--lighter) 0.2em, var(--lighter) 0.4em);
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 0.3rem, var(--lighter) 0.3rem, var(--lighter) 0.6rem);
 }
 
 .flex-center-column {
@@ -169,29 +169,23 @@
     flex-wrap: wrap;
 }
 
-.lvl-nav div {
+.lvl-nav a {
     border-radius: 100%;
     height: 15vw;
     width: 15vw;
     padding: 0;
-}
-
-.lvl-nav a {
-    display: block; /* So that we can edit its width */
     font-size: 7.5vw;
-    border-radius: 100%;
-    width: 100%;
-    height: 100%;
     line-height: 200%;
+    color: var(--links);
 }
 
 .neumorphic {
     background-color: var(--background);
     box-shadow:
-        inset 0 0 1em var(--lighter),
-        0 0 0.5em var(--lighter),
-        -0.3em -0.3em 1em var(--shine),
-        0.3em 0.3em 0.6em var(--shadow);
+        0 0 0.5rem var(--lighter),
+        -0.3rem -0.3rem 1rem var(--shine),
+        0.3rem 0.3rem 0.6rem var(--shadow),
+        inset 0.3rem 0.3rem 0.6rem var(--lighter);
     color: var(--titles);
     border-radius: var(--borderRadius);
 }
@@ -268,7 +262,7 @@ button {
 }
 
 :focus-visible {
-    outline: 0.6rem solid var(--links);
+    outline: 0.5rem solid var(--links);
     border-radius: var(--borderRadius);
 }
 
