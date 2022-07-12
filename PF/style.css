@@ -38,7 +38,7 @@
     margin-bottom: 0.2em;
 }
 
-.answers a {
+.answers button {
     width: 35%;
     height: 15em;
     padding: 0 0 0.6em 0;
@@ -116,8 +116,8 @@
     margin-top: 1em;
 }
 
-#feedbackBar a {
-    width: 5em;
+#feedbackBar button {
+    width: 6em;
 }
 
 .correct {
@@ -262,7 +262,7 @@ button {
 }
 
 :focus-visible {
-    outline: 0.5rem solid var(--links);
+    outline: 0.4rem solid var(--links);
     border-radius: var(--borderRadius);
 }
 
@@ -290,7 +290,8 @@ noscript.neumorphic {
 }
 
 select {
-    padding: 0.5em;
+    height: 3em;
+    padding-left: 0.5em;
     margin: 0 1em 2em 1em;
     border: none;
 }
