@@ -72,6 +72,12 @@
                     "es": "Siguiente nivel:",
                     "tokiPona": "musi sin li kama:"
                 },
+                "hint": {
+                    "ca": "Pista",
+                    "en": "Pista",
+                    "es": "Hint",
+                    "tokiPona": "sona"
+                },
                 "incorrect": {
                     "ca": "La resposta correcta era",
                     "en": "The correct answer was",

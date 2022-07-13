@@ -1,19 +1,20 @@
-export { genQuestionCandidates };
+export { genQuestion };
 import { fetchLevelInfo } from '../data/fetch.js';
 
 /**
- * Get 2 random bird objects from the current level, and a third bird object from either the level
- * just before the current one (50% chance) or any of the other past levels (50% chance), and pass
- * them to the callback function.
+ * Get 2 random bird objects from the current level, a third bird object from either the level
+ * just before the current one (50% chance) or any of the other past levels (50% chance) and a
+ * random hint object, and pass them to the callback function.
  * @param {Int} currentLevel 
  * @param {Function} callback 
  */
-function genQuestionCandidates(currentLevel, callback) {
+function genQuestion(currentLevel, callback) {
     fetchLevelInfo((data) => {
         // There will be 3 choices
         ///////////////////////////////////////////////TO-DO: take choice number as parameter here
         // to have a player option for higher difficulty (more answer choices), rethink algorithm
         let choices = [,,,];
+        let hint;
         let birds;
 
         if(currentLevel > 1) {
@@ -56,6 +57,8 @@ function genQuestionCandidates(currentLevel, callback) {
 
         }
 
-        callback(choices);
+        hint = data[currentLevel].hints.sort(() => Math.random() - 0.5)[0];
+
+        callback(choices, hint);
     });
 }

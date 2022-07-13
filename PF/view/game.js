@@ -1,4 +1,4 @@
-import { genQuestionCandidates } from '../controller/genQuestionCandidates.js';
+import { genQuestion } from '../controller/genQuestionCandidates.js';
 import { fetchRecordings, fetchTextInfo } from '../data/fetch.js'
 import { sumPoints, getPoints, pointsNecessary, getSelectedLevel, getLanguage } from '../controller/settings.js';
 
@@ -38,7 +38,7 @@ const nextLevel = document.querySelector('.game-top-bar p:nth-of-type(3)');
 const nextQuestionBtn = feedbackBar.getElementsByTagName('button')[0];
 /* These need to be editable later: we want to make a single fetch of the translation and store the
 result, instead of fetching the text each time we run the feedback functions */
-let incorrectText, correctText;
+let incorrectText, correctText, hintText;
 
 function translateTexts() {
     fetchTextInfo('game', (texts) => {
@@ -51,6 +51,7 @@ function translateTexts() {
         nextQuestionBtn.textContent = texts.next[language];
         incorrectText = texts.incorrect[language];
         correctText = texts.correct[language];
+        hintText = texts.hint[language];
     });
 }
 
@@ -86,8 +87,8 @@ function redrawPoints() {
 }
 
 // Reset the content of the answer feedback bar and the color of the body
-function resetFeedback() {
-    feedbackMessage.innerHTML = '';
+function resetFeedback(hint) {
+    feedbackMessage.innerHTML = `<b>${hintText}</b>: ${hint[language]}`;
     nextQuestionBtn.hidden = true;
     document.body.className = '';
     questionContainer.classList.remove('incorrect');
@@ -114,7 +115,7 @@ function changeAnswerClickability(on) {
  * the first of which is the correct option.
  * @param {String[]} birdChoices Array of 3 objects representing birds.
  */
-function drawQuestion(birdChoices) {
+function drawQuestion(birdChoices, hint) {
     // Get recording from first bird (correct choice) in choices.
     // Draw the question via callback when we get the data.
     fetchRecordings(birdChoices[0].name.sci, minQuality, minDuration, maxDuration, (recordings) => {
@@ -122,7 +123,7 @@ function drawQuestion(birdChoices) {
         const randomIndex = Math.floor(Math.random() * recordings.length);
         audioElement.setAttribute('src', recordings[randomIndex].file);
 
-        resetFeedback();
+        resetFeedback(hint);
         changeAnswerClickability(true);
 
         // Save the correct option's name for the feedback
@@ -191,9 +192,9 @@ answerContainer.addEventListener('click', e => {
 });
 
 nextQuestionBtn.addEventListener('click', () => {
-    genQuestionCandidates(level, drawQuestion);
+    genQuestion(level, drawQuestion);
 });
 
-genQuestionCandidates(level, drawQuestion);
+genQuestion(level, drawQuestion);
 translateTexts();
 redrawPoints();
