@@ -7,6 +7,7 @@
             "es": "Claro",
             "tokiPona": "walo"
         },
+        "unlockAtLevel" : 0,
         "colors": {
             "--background": "#dcdedd",
 	        "--lighter": "#fff4",
@@ -28,6 +29,7 @@
             "es": "Oscuro",
             "tokiPona": "pimeja"
         },
+        "unlockAtLevel" : 0,
         "colors": {
             "--background": "#2a302c",
 	        "--lighter": "#39423844",
@@ -49,11 +51,12 @@
             "es": "Claro en alto constraste",
             "tokiPona": "walo wawa tawa lukin ike"
         },
+        "unlockAtLevel" : 0,
         "colors": {
             "--background": "#fff",
-	        "--lighter": "#8c8c8c",
+	        "--lighter": "#000a",
 	        "--shine": "#fff",
-	        "--shadow": "#8c8c8c",
+	        "--shadow": "#000a",
 	        "--text": "#000",
 	        "--titles": "#000",
 	        "--links": "#098a00",
@@ -70,16 +73,83 @@
             "es": "Oscuro en alto constraste",
             "tokiPona": "pimeja wawa tawa lukin ike"
         },
+        "unlockAtLevel" : 0,
         "colors": {
             "--background": "#000",
-	        "--lighter": "#8c8c8c",
-	        "--shine": "#8c8c8c",
+	        "--lighter": "#fff5",
+	        "--shine": "#fff5",
 	        "--shadow": "#000",
 	        "--text": "#fff",
 	        "--titles": "#fff",
 	        "--links": "#11ff00",
 
             "--hoverFilter": "0.5"
+        }
+    },
+
+    {
+        "id": "columbaLivia",
+        "name": {
+            "ca": "Colom roquer",
+            "en": "Rock pigeon",
+            "es": "Paloma bravía",
+            "tokiPona": "waso"
+        },
+        "unlockAtLevel" : 1,
+        "colors": {
+            "--background": "#657385",
+	        "--lighter": "#5c9e8544",
+	        "--shine": "#5c9e85",
+	        "--shadow": "#562d52",
+	        "--text": "#e4e9ec",
+	        "--titles": "#b9c2d1",
+	        "--links": "#1a1b20",
+
+            "--hoverFilter": "0.9"
+        }
+    },
+
+    {
+        "id": "myiopsittaMonachus",
+        "name": {
+            "ca": "Cotorreta pitgrisa",
+            "en": "Monk parakeet",
+            "es": "Cotorra argentina",
+            "tokiPona": "waso"
+        },
+        "unlockAtLevel" : 2,
+        "colors": {
+            "--background": "#6D8744",
+	        "--lighter": "#A5BA5244",
+	        "--shine": "#A5BA52",
+	        "--shadow": "#21444A",
+	        "--text": "#E0DECC",
+	        "--titles": "#FCEBD9",
+	        "--links": "#004D4D",
+
+            "--hoverFilter": "0.9"
+        }
+    },
+
+    {
+        "id": "cyanistesCaeruleus",
+        "name": {
+            "ca": "Mallerenga blava",
+            "en": "Herrerillo común",
+            "es": "Eurasian blue tit",
+            "tokiPona": "waso"
+        },
+        "unlockAtLevel" : 3,
+        "colors": {
+            "--background": "white",
+	        "--lighter": "#d4d57c44",
+	        "--shine": "#d4d57c",
+	        "--shadow": "cadetblue",
+	        "--text": "#20334b",
+	        "--titles": "#081b56",
+	        "--links": "#296aee",
+
+            "--hoverFilter": "0.9"
         }
     }
 ]

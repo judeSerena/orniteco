@@ -1,4 +1,4 @@
-import { setTheme, getLanguage, setLanguage, getTheme } from '../controller/settings.js'
+import { setTheme, getLanguage, setLanguage, getTheme, getPoints, pointsNecessary } from '../controller/settings.js'
 import { fetchThemesInfo, fetchAvailableLanguages, fetchTextInfo } from '../data/fetch.js';
 import { applyTheme } from './applyTheme.js';
 
@@ -8,7 +8,6 @@ const themeSelect = form.querySelector('select[name="theme"]');
 const languageSelect = form.querySelector('select[name="language"]');
 const title = document.getElementsByTagName('h1')[0];
 const themeText = form.querySelector('label[for="theme"]');
-const submitBtn = form.getElementsByTagName('button')[0];
 const back = document.getElementsByClassName('back')[0];
 
 let language = getLanguage();
@@ -20,16 +19,20 @@ const fragment = new DocumentFragment();
 function populateThemes() {
     // Fetch the themes array
     fetchThemesInfo((themes) => {
-        themes.forEach((theme) => {
-            const option = document.createElement('option');
-            option.value = theme.id;
-            option.textContent = theme.name[language];
+        for(let i = 0; i < themes.length; i++) {
+            // Only put the theme inside the select if it is unlocked by level
+            if(getPoints() >= pointsNecessary(themes[i].unlockAtLevel)) {
+                console.log(getPoints());
+                const option = document.createElement('option');
+                option.value = themes[i].id;
+                option.textContent = themes[i].name[language];
 
-            // If this is the option that the user saved last time, show it already selected
-            if (getTheme() === theme.id) { option.selected = true; }
+                // If this is the option that the user saved last time, show it already selected
+                if (getTheme() === themes[i].id) { option.selected = true; }
 
-            themeSelect.appendChild(option);
-        })
+                themeSelect.appendChild(option);
+            }
+        }
     });
 };
 
@@ -56,7 +59,6 @@ function translateTexts() {
     fetchTextInfo('options', (texts) => {
         title.textContent = texts.title[language];
         themeText.textContent = texts.theme[language];
-        submitBtn.textContent = texts.save[language];
         back.textContent = texts.back[language];
     });
 }
