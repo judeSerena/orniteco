@@ -96,12 +96,16 @@
 }
 
 .question {
-    padding: 1em;
+    padding: 1em 1em 2em 1em;
     margin-top: 2em;
 }
 
 .question audio {
     margin: 1em;
+}
+
+.question p.unselectable {
+    margin-top: 1em;
 }
 
 .unselectable {
@@ -113,11 +117,11 @@
 #feedbackBar {
     text-align: center;
     font-size: 1.2em;
-    margin-top: 1em;
 }
 
 #feedbackBar button {
     width: 6em;
+    margin: 1em 0 0 0;
 }
 
 .correct {
@@ -244,6 +248,7 @@ a.neumorphic:hover,
 button.neumorphic:hover,
 :focus-visible {
     filter: brightness(var(--hoverFilter));
+    box-shadow: none;
 }
 
 body {
@@ -254,7 +259,6 @@ body {
     transition:
         box-shadow 0.2s;
     color: var(--text);
-    background-size: cover;
 }
 
 button {
