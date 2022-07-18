@@ -28,6 +28,26 @@
                     "tokiPona": "waso"
                 }
             }
+        ],
+        "hints": [
+            {
+                "ca": "El cant del tudó i la tórtora turca són similars, però el del tudó té dues síl·labes més.",
+                "es": "El canto de la paloma torcaz y la tórtola turca son similares, però el de la paloma torcaz tiene dos sílabas más.",
+                "en": "The song of the common wood pigeon and the Eurasian collared dove are similar, but the common wood pigeon's song has two syllables more.",
+                "tokiPona": ""
+            },
+            {
+                "ca": "El tudó fa \"tu-TU-tu tu-tu\", i la tórtora turca \"tu-TU-tu\".",
+                "es": "La paloma torcaz hace \"tu-TU-tu tu-tu\", y la tórtola turca \"tu-TU-tu\".",
+                "en": "The common wood pigeon goes \"goo-GOO-goo goo-goo\", and the Eurasian collared dove \"goo-GOO-goo\".",
+                "tokiPona": ""
+            },
+            {
+                "ca": "La tórtora turca també fa un so estrident semblant a un HAH-HAH, especialment just abans d'aterrar.",
+                "es": "La tórtola turca también hace un sonido estridente parecido a un HAH-HAH, especialmente justo antes de aterrizar.",
+                "en": "The Eurasian collared dove also makes a screeching call resembling a HAH-HAH, especially just before landing.",
+                "tokiPona": ""
+            }
         ]
     },
 
@@ -60,6 +80,26 @@
                     "tokiPona": "waso"
                 }
             }
+        ],
+        "hints": [
+            {
+                "ca": "Els pardals emeten un crit curt i cridaner.",
+                "es": "Los gorriones comunes emiten una llamada corta y chillona.",
+                "en": "House sparrows have a short, chirping call.",
+                "tokiPona": ""
+            },
+            {
+                "ca": "La veu de la cotorra argentina és més aspra que la de la cotorra de Kramer, però les dues tenen crits que grinyolen.",
+                "es": "La voz de la cotorra argentina es más áspera que la de la cotorra de Kramer, pero las dos tienen llamadas chirriantes.",
+                "en": "The monk parakeet's voice is harsher than the rose-ringed parakeet's, although both have a screeching call.",
+                "tokiPona": ""
+            },
+            {
+                "ca": "Els crits de la cotorra de Kramer fan una subtil caiguda de nota.",
+                "es": "Las llamadas de la cotorra de Kramer hacen una sutil caída de nota.",
+                "en": "The rose-ringed parakeet's screech subtly descends in pitch.",
+                "tokiPona": ""
+            }
         ]
     },
 
@@ -85,13 +125,28 @@
             },
             {
                 "name": {
-                    "sci": "Cyanistes caeruleus",
-                    "ca": "Mallerenga blava",
-                    "es": "Herrerillo común",
-                    "en": "Eurasian blue tit",
+                    "sci": "Apus apus",
+                    "ca": "Falcillot negre",
+                    "es": "Vencejo común",
+                    "en": "Common swift",
                     "tokiPona": "waso"
                 }
             }
+        ],
+        "hints": [
+            {
+                "ca": "La garsa eurasiàtica fa sons semblants a rialles. De la família dels còrvids, sona semblant al corb.",
+                "es": "La urraca común hace sonidos parecidos a risas. De la familia de los córvidos, suena parecida al cuervo.",
+                "en": "The eurasian magpie makes sounds similar to a laugh. From the corvid family, it sounds similar to the crow.",
+                "tokiPona": ""
+            },
+            {
+                "ca": "El falcillot negre fa crits abundants, aguts i llargs.",
+                "es": "El vencejo común lanza gritos abundantes, agudos y largos.",
+                "en": "The common swift makes abundant, high-pitched long screams.",
+                "tokiPona": ""
+            }
+            
         ]
     },
 
@@ -99,10 +154,10 @@
         "birds": [
             {
                 "name": {
-                    "sci": "Apus apus",
-                    "ca": "Falcillot negre",
-                    "es": "Vencejo común",
-                    "en": "Common swift",
+                    "sci": "Cyanistes caeruleus",
+                    "ca": "Mallerenga blava",
+                    "es": "Herrerillo común",
+                    "en": "Eurasian blue tit",
                     "tokiPona": "waso"
                 }
             },
@@ -123,6 +178,32 @@
                     "en": "European greenfinch",
                     "tokiPona": "waso"
                 }
+            }
+        ],
+        "hints": [
+            {
+                "ca": "La mallerenga blava emet una gran varietat de sons. Els seus cants són una barreja de síl·labes llargues i síl·labes curtes i ràpides.",
+                "es": "El herrerillo común emite una gran variedad de sonidos. Sus cantos son una mezcla de sílabas largas y sílabas cortas y rápidas.",
+                "en": "The Eurasian blue tit emits a large variety of sounds. Its songs are a combination of long syllables and short, fast syllables.",
+                "tokiPona": ""
+            },
+            {
+                "ca": "Alguns crits d'alerta de la mallerenga blava són una sèrie de síl·labes molt ràpides i no musicals.",
+                "es": "Algunas llamadas de alerta del herrerillo común son una serie de sílabas muy rápidas y no musicales.",
+                "en": "Some alert calls of the Eurasian blue tit are a series of very fast chattering syllables.",
+                "tokiPona": ""
+            },
+            {
+                "ca": "La cançó de la mallerenga carbonera és molt distintiva: les notes fan amunt i avall. Aguda, greu, aguda, greu. També fa crits d'alarma no musicals.",
+                "es": "La canción del carbonero común es muy distintiva: las notas van arriba y abajo. Aguda, grave, aguda, grave. También emite gritos de alarma no musicales.",
+                "en": "The great tit's song is very distinctive: its pitch goes up and down. High, low, high, low.",
+                "tokiPona": ""
+            },
+            {
+                "ca": "La cançó del verderol comú combina seccions de síl·labes a diferents velocitats i seccions semblants a brunzits amb caiguda de nota.",
+                "es": "La canción del verderón común combina secciones de sílabas a diferentes velocidades y secciones parecidas a zumbidos con caída de nota.",
+                "en": "The European greenfinch's song combines sections of syllables of different speeds and sections of falling pitch buzzes.",
+                "tokiPona": ""
             }
         ]
     },
@@ -155,6 +236,26 @@
                     "en": "Common blackbird",
                     "tokiPona": "waso"
                 }
+            }
+        ],
+        "hints": [
+            {
+                "ca": "Els estornells vulgar i negre són experts imitadors d'altres espècies, així com de sons naturals i artificials.",
+                "es": "Los estorninos pinto y negro son expertos imitadores de otras especies, así como de ruidos naturales y artificiales.",
+                "en": "The common and spotless starlings are proficient mimics of other species, as well as naturally-ocurring and human-made noises.",
+                "tokiPona": ""
+            },
+            {
+                "ca": "Els sons de l'estornell vulgar són similars als de l'estornell negre, però més suaus i amb més \"clics\".",
+                "es": "Los sonidos del estornino pinto son similares a los del estornino negro, pero más suaves y con más \"clics\".",
+                "en": "The calls of the common starling are similar to the spotless starling's, but softer and with more \"clicks\".",
+                "tokiPona": ""
+            },
+            {
+                "ca": "La merla té un cant musical, amb notes relativament greus. També fa crits d'alarma: sèries de \"puc-puc-puc-puc\" per a depredadors terrestres.",
+                "es": "El mirlo común tiene un canto musical, con notas relativamente graves. También hace llamadas de alarma: series de \"puc-puc-puc-puc\" para depredadores terrestres.",
+                "en": "The common blackbird has a musical, relatively low-pitched song. It also makes alarm calls: a series of \"pook-pook-pook-pook\" for terrestrial predators.",
+                "tokiPona": ""
             }
         ]
     }
