@@ -74,8 +74,8 @@
                 },
                 "hint": {
                     "ca": "Pista",
-                    "en": "Pista",
-                    "es": "Hint",
+                    "en": "Hint",
+                    "es": "Pista",
                     "tokiPona": "sona"
                 },
                 "incorrect": {
