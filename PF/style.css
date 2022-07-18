@@ -87,17 +87,32 @@
 
 .game-top-bar {
     padding: 0.3em;
+    
+}
+
+header {
+    min-width: 100%;
+}
+
+.game-top-bar * {
+    margin: 0 0.2em;
 }
 
 .game-top-bar li {
     list-style: none;
     display: inline-block;
-    margin: 1em;
+    margin: 0.7em;
+}
+
+.game-top-bar div {
+    justify-content: center;
+    margin: 0 1em;
 }
 
 .question {
     padding: 1em 1em 2em 1em;
     margin-top: 2em;
+    min-width: 100%;
 }
 
 .question audio {
@@ -194,16 +209,17 @@
     border-radius: var(--borderRadius);
 }
 
-.point-bar-container {
-    width: 25%;
+div.point-bar-container {
+    width: 13em;
     height: 1em;
 }
 
-.point-bar {
+div.point-bar {
     background-color: var(--links);
     height: 1em;
     width: 0%;
     border-radius: var(--borderRadius);
+    margin: 0;
 }
 
 .point-bar-glow {
@@ -248,7 +264,6 @@ a.neumorphic:hover,
 button.neumorphic:hover,
 :focus-visible {
     filter: brightness(var(--hoverFilter));
-    box-shadow: none;
 }
 
 body {

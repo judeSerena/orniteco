@@ -34,7 +34,7 @@ const question = document.querySelector('main p:first-child');
 const back = document.querySelector('.game-top-bar ul li:nth-child(1) a');
 const settings = document.querySelector('.game-top-bar ul li:nth-child(2) a');
 const points = document.querySelector('.game-top-bar p:nth-of-type(1)');
-const nextLevel = document.querySelector('.game-top-bar p:nth-of-type(3)');
+const nextLevel = document.querySelector('.game-top-bar div:nth-of-type(2) p');
 const nextQuestionBtn = feedbackBar.getElementsByTagName('button')[0];
 /* These need to be editable later: we want to make a single fetch of the translation and store the
 result, instead of fetching the text each time we run the feedback functions */
