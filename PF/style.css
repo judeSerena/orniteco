@@ -2,6 +2,7 @@
 
 :root {
     --background: #dcdedd;
+    --backgroundGradient: #dcdedd;
     --lighter: #fff4;
     --shine: #fff;
     --shadow: #9fb3b1;
@@ -200,7 +201,7 @@ header {
 }
 
 .neumorphic {
-    background-color: var(--background);
+    background: var(--backgroundGradient);
     box-shadow:
         0 0 0.5rem var(--lighter),
         -0.3rem -0.3rem 1rem var(--shine),
@@ -210,6 +211,7 @@ header {
 }
 
 div.point-bar-container {
+    background: var(--background);
     width: 13em;
     height: 1em;
 }
@@ -266,8 +268,12 @@ button.neumorphic:hover,
     filter: brightness(var(--hoverFilter));
 }
 
+b {
+    color: var(--titles);
+}
+
 body {
-    background-color: var(--background);
+    background: var(--background);
     font-family: 'Source Sans Pro', sans-serif;
     height: 100vh;
     padding: 0 20%;

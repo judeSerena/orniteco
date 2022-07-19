@@ -10,6 +10,7 @@
         "unlockAtLevel" : 0,
         "colors": {
             "--background": "#dcdedd",
+            "--backgroundGradient": "#dcdedd",
 	        "--lighter": "#fff4",
 	        "--shine": "#fff",
 	        "--shadow": "#9fb3b1",
@@ -32,6 +33,7 @@
         "unlockAtLevel" : 0,
         "colors": {
             "--background": "#2a302c",
+            "--backgroundGradient": "#2a302c",
 	        "--lighter": "#39423844",
 	        "--shine": "#394238",
 	        "--shadow": "#1c1d1f",
@@ -39,7 +41,7 @@
 	        "--titles": "#ccd6cb",
 	        "--links": "#6a9c75",
 
-            "--hoverFilter": "0.9"
+            "--hoverFilter": "1.1"
         }
     },
 
@@ -54,6 +56,7 @@
         "unlockAtLevel" : 0,
         "colors": {
             "--background": "#fff",
+            "--backgroundGradient": "#fff",
 	        "--lighter": "#000a",
 	        "--shine": "#fff",
 	        "--shadow": "#000a",
@@ -76,6 +79,7 @@
         "unlockAtLevel" : 0,
         "colors": {
             "--background": "#000",
+            "--backgroundGradient": "#000",
 	        "--lighter": "#fff5",
 	        "--shine": "#fff5",
 	        "--shadow": "#000",
@@ -83,7 +87,7 @@
 	        "--titles": "#fff",
 	        "--links": "#11ff00",
 
-            "--hoverFilter": "0.5"
+            "--hoverFilter": "1.5"
         }
     },
 
@@ -95,9 +99,10 @@
             "es": "Paloma bravía",
             "tokiPona": "waso"
         },
-        "unlockAtLevel" : 1,
+        "unlockAtLevel" : 0,
         "colors": {
             "--background": "#657385",
+            "--backgroundGradient": "#657385",
 	        "--lighter": "#5c9e8544",
 	        "--shine": "#5c9e85",
 	        "--shadow": "#562d52",
@@ -117,39 +122,87 @@
             "es": "Cotorra argentina",
             "tokiPona": "waso"
         },
-        "unlockAtLevel" : 2,
+        "unlockAtLevel" : 0,
         "colors": {
-            "--background": "#6D8744",
-	        "--lighter": "#A5BA5244",
-	        "--shine": "#A5BA52",
-	        "--shadow": "#21444A",
-	        "--text": "#E0DECC",
-	        "--titles": "#FCEBD9",
-	        "--links": "#004D4D",
+            "--background": "#6d8744",
+            "--backgroundGradient": "linear-gradient(to top left, #899070, #6d8744)",
+	        "--lighter": "#a0b05044",
+	        "--shine": "#a0b050",
+	        "--shadow": "#21444a",
+	        "--text": "#e0decc",
+	        "--titles": "#fcebd9",
+	        "--links": "#00495d",
 
             "--hoverFilter": "0.9"
         }
     },
 
     {
-        "id": "cyanistesCaeruleus",
+        "id": "picaPica",
         "name": {
-            "ca": "Mallerenga blava",
-            "en": "Herrerillo común",
-            "es": "Eurasian blue tit",
+            "ca": "Garsa eurasiàtica",
+            "es": "Urraca común",
+            "en": "Eurasian magpie",
             "tokiPona": "waso"
         },
-        "unlockAtLevel" : 3,
+        "unlockAtLevel" : 0,
         "colors": {
-            "--background": "white",
-	        "--lighter": "#d4d57c44",
-	        "--shine": "#d4d57c",
-	        "--shadow": "cadetblue",
-	        "--text": "#20334b",
-	        "--titles": "#081b56",
-	        "--links": "#296aee",
+            "--background": "#202334",
+            "--backgroundGradient": "linear-gradient(to bottom right, #202334, #1c2454)",
+	        "--lighter": "#29346644",
+	        "--shine": "#293466",
+	        "--shadow": "#0a0f1b",
+	        "--text": "#a3a1b6",
+	        "--titles": "#d0cfe8",
+	        "--links": "#f2f3fb",
+
+            "--hoverFilter": "1.1"
+        }
+    },
+
+    {
+        "id": "parusMajor",
+        "name": {
+            "ca": "Mallerenga carbonera",
+            "es": "Carbonero común",
+            "en": "Great tit",
+            "tokiPona": "waso"
+        },
+        "unlockAtLevel" : 0,
+        "colors": {
+            "--background": "#636653",
+            "--backgroundGradient": "radial-gradient(circle at 50% 120%, #262e3b33, 80%, #262e3b)",
+	        "--lighter": "#fff1",
+	        "--shine": "#fff2",
+	        "--shadow": "#0008",
+	        "--text": "#c5cad0",
+	        "--titles": "#fafdff",
+	        "--links": "#ffd748",
 
             "--hoverFilter": "0.9"
+        }
+    },
+
+    {
+        "id": "sturnusVulgaris",
+        "name": {
+            "ca": "Estornell vulgar",
+            "es": "Estornino pinto",
+            "en": "Common starling",
+            "tokiPona": "waso"
+        },
+        "unlockAtLevel" : 0,
+        "colors": {
+            "--background": "#263032",
+            "--backgroundGradient": "linear-gradient(#263032, #203730)",
+	        "--lighter": "#37495544",
+	        "--shine": "#374955",
+	        "--shadow": "#101018",
+	        "--text": "#bdbab5",
+	        "--titles": "#c9b495",
+	        "--links": "#d9d85e",
+
+            "--hoverFilter": "1.1"
         }
     }
 ]
