@@ -95,14 +95,50 @@
                     "en": "Next",
                     "es": "Siguiente",
                     "tokiPona": "sin"
+                },
+                "congrats": {
+                    "ca": "Enhorabona!",
+                    "en": "Congratulations!",
+                    "es": "¡Enhorabuena!",
+                    "tokiPona": "pona!"
+                },
+                "unlocked": {
+                    "ca": "Nivell i tema de color desbloquejats!",
+                    "en": "Level and color theme unlocked!",
+                    "es": "¡Nivel y tema de color desbloqueados!",
+                    "tokiPona": "sina ken open e musi sin e kule lipu sin!"
+                },
+                "backToLevels": {
+                    "ca": "Tornar a nivells",
+                    "en": "Back to levels",
+                    "es": "Volver a niveles",
+                    "tokiPona": "tawa musi"
+                },
+                "share": {
+                    "ca": "Compartir",
+                    "en": "Share",
+                    "es": "Compartir",
+                    "tokiPona": "toki e ni"
+                },
+                "message1": {
+                    "ca": "He superat el nivell",
+                    "en": "I have completed level",
+                    "es": "He completado el nivel",
+                    "tokiPona": "mi pini e musi pi nanpa"
+                },
+                "message2": {
+                    "ca": "d'#Orniteco! 😁🐦🎵 Aprèn a identificar ocells pel seu cant: [link]",
+                    "en": "of #Orniteco! 😁🐦🎵 Learn to identify birds by their song: [link]",
+                    "es": "de #Orniteco! 😁🐦🎵 Aprende a identificar pájaros por su canto: [link]",
+                    "tokiPona": "lon ilo #Oniteko! 😁🐦🎵 o sona e waso tan kalama ona: [link]"
                 }
             },
     
             "about": {
                 "body": {
-                    "ca": "<a class=\"back\" href=\"./index.html\">🡄 Enrere</a><h1 class=\"title\">Sobre OrnitecO</h1><p>OrnitecO és un quiz interactiu per a aprendre a identificar ocells pel seu cant.<br>Els ocells seleccionats són propis de les àrees urbanes i semi-urbanes de Catalunya, en concret de Barcelona.</p><p>Els àudios enllaçats a cada pregunta provenen del repositori col·laboratiu de grabacions <a href=\"https://xeno-canto.org/?language=ca\">xeno-canto</a> i són recuperats a través de l'<a href=\"https://xeno-canto.org/explore/api\">API gratuïta xeno-canto</a>. Aquesta API limita el número màxim de peticions a 1 per segon. Per tant, és possible que aquesta app no pugui generar nous àudios amb prou rapidesa si moltes persones la fan servir alhora.</p><p>OrnitecO ha sigut desenvolupat per <a href=\"#\">Squali</a> durant un curs de desenvolupament web front-end, sota la tutela del seu professor Albert Mata.</p><p>Visita el <a href=\"#\">repositori del projecte a Github</a>.</p>",
-                    "en": "<a class=\"back\" href=\"./index.html\">🡄 Back</a><h1 class=\"title\">About OrnitecO</h1><p>OrnitecO is an interactive quiz to learn to identify birds by their song.<br>The birds selected are common to the urban and semi-urban areas of Catalonia, specially of Barcelona.</p><p>The audios linked in each question are provided by the collaborative recording repository <a href=\"https://xeno-canto.org/?language=en\">xeno-canto</a> and are fetched through the<a href=\"https://xeno-canto.org/explore/api\">free xeno-canto API</a>. This API has a request rate limit of 1 per second. Therefore, it is possible that this app could not generate new audios fast enough if many people are using it at the same time.</p><p>OrnitecO was developed by <a href=\"#\">Squali</a> during a front-end web development course, under guidance of his teacher Albert Mata.</p><p>Visit the <a href=\"#\">project's repository at Github</a>.</p>",
-                    "es": "<a class=\"back\" href=\"./index.html\">🡄 Atrás</a><h1 class=\"title\">Sobre OrnitecO</h1><p>OrnitecO es un quiz interactivo para aprender a identificar pájaros por su canto.<br>Los pájaros seleccionados son propios de las áreas urbanas y semi-urbanas de Cataluña, en concreto de Barcelona.</p><p>Los audios enlazados en cada pregunta provienen del repositorio colaborativo de grabaciones <a href=\"https://xeno-canto.org/?language=es\">xeno-canto</a> y son recuperadas a través de la <a href=\"https://xeno-canto.org/explore/api\">API gratuita xeno-canto</a>. Esta API limita el número máximo de peticiones a 1 por segundo. Por lo tanto, es posible que esta app no pueda generar audios con suficiente rapidez si muchas personas la usan a la vez.</p><p>OrnitecO ha sido desarrollado por <a href=\"#\">Squali</a> durante un curso de desarrollo web front-end, bajo la tutela de su profesor Albert Mata.</p><p>Visita el <a href=\"#\">repositorio del proyecto en Github</a>.</p>",
+                    "ca": "<a class=\"back\" href=\"./index.html\">🡄 Enrere</a><h1 class=\"title\">Sobre Orniteco</h1><p>Orniteco és un quiz interactiu per a aprendre a identificar ocells pel seu cant.<br>Els ocells seleccionats són propis de les àrees urbanes i semi-urbanes de Catalunya, en concret de Barcelona.</p><p>Els àudios enllaçats a cada pregunta provenen del repositori col·laboratiu de grabacions <a href=\"https://xeno-canto.org/?language=ca\">xeno-canto</a> i són recuperats a través de l'<a href=\"https://xeno-canto.org/explore/api\">API gratuïta xeno-canto</a>. Aquesta API limita el número màxim de peticions a 1 per segon. Per tant, és possible que aquesta app no pugui generar nous àudios amb prou rapidesa si moltes persones la fan servir alhora.</p><p>Orniteco ha sigut desenvolupat per <a href=\"#\">Squali</a> durant un curs de desenvolupament web front-end, sota la tutela del seu professor Albert Mata.</p><p>Visita el <a href=\"#\">repositori del projecte a Github</a>.</p>",
+                    "en": "<a class=\"back\" href=\"./index.html\">🡄 Back</a><h1 class=\"title\">About Orniteco</h1><p>Orniteco is an interactive quiz to learn to identify birds by their song.<br>The birds selected are common to the urban and semi-urban areas of Catalonia, specially of Barcelona.</p><p>The audios linked in each question are provided by the collaborative recording repository <a href=\"https://xeno-canto.org/?language=en\">xeno-canto</a> and are fetched through the<a href=\"https://xeno-canto.org/explore/api\">free xeno-canto API</a>. This API has a request rate limit of 1 per second. Therefore, it is possible that this app could not generate new audios fast enough if many people are using it at the same time.</p><p>Orniteco was developed by <a href=\"#\">Squali</a> during a front-end web development course, under guidance of his teacher Albert Mata.</p><p>Visit the <a href=\"#\">project's repository at Github</a>.</p>",
+                    "es": "<a class=\"back\" href=\"./index.html\">🡄 Atrás</a><h1 class=\"title\">Sobre Orniteco</h1><p>Orniteco es un quiz interactivo para aprender a identificar pájaros por su canto.<br>Los pájaros seleccionados son propios de las áreas urbanas y semi-urbanas de Cataluña, en concreto de Barcelona.</p><p>Los audios enlazados en cada pregunta provienen del repositorio colaborativo de grabaciones <a href=\"https://xeno-canto.org/?language=es\">xeno-canto</a> y son recuperadas a través de la <a href=\"https://xeno-canto.org/explore/api\">API gratuita xeno-canto</a>. Esta API limita el número máximo de peticiones a 1 por segundo. Por lo tanto, es posible que esta app no pueda generar audios con suficiente rapidez si muchas personas la usan a la vez.</p><p>Orniteco ha sido desarrollado por <a href=\"#\">Squali</a> durante un curso de desarrollo web front-end, bajo la tutela de su profesor Albert Mata.</p><p>Visita el <a href=\"#\">repositorio del proyecto en Github</a>.</p>",
                     "tokiPona": "<a class=\"back\" href=\"./index.html\">🡄 lipu lawa</a><h1 class=\"title\">sona Oniteko</h1><p>ilo Oniteko li musi pi sona waso.<br>waso li lon ma tomo suli lon ma tomo Paselona pi ma Katalunia.</p><p>Kalama li tan ilo <a href=\"https://xeno-canto.org/?language=en\">Senokanto</a>, li kama kepeken ilo <a href=\"https://xeno-canto.org/explore/api\">API Senokanto</a> pi mani ala. ilo ni li wile ala e ni: pana e kalama mute lon tenpo lili. tan ni la, jan mute mute li ken ala kepeken e ilo Oniteko lon tempo sama.</p><p>ilo Oniteko li kama tan jan <a href=\"#\">Sukali</a>. ona li pali e ilo Oniteko lon nasin sona pi pali lipu. jan Alube Mata li pana e sona tawa ona.</p><p>o lukin e <a href=\"#\">sitelen pali pi ilo Oniteko lon ilo Kiha</a>.</p>"
                 }
             },

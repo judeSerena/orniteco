@@ -2,9 +2,9 @@ import { genQuestion } from '../controller/genQuestionCandidates.js';
 import { fetchRecordings, fetchTextInfo } from '../data/fetch.js'
 import { sumPoints, getPoints, pointsNecessary, getSelectedLevel, getLanguage } from '../controller/settings.js';
 
+let popupShown = false;
+
 // Settings for recording fetching.
-////////////////////////////////////////////////// TO-DO: make settings editable by user?
-////////////////////////////////////////////////// TO-DO: load audio element hidden in html, then unhide it once its loaded
 const minQuality = 'c';
 const minDuration = 5;
 const maxDuration = 10;
@@ -27,18 +27,33 @@ const answerButtons = answerContainer.querySelectorAll('.answers button');
 const answerButtonsCommonNames = answerContainer.querySelectorAll('.answers button .common-name');
 const answerButtonsScientificNames = answerContainer.querySelectorAll('.answers button .scientific-name');
 const answerButtonsImgs = answerContainer.querySelectorAll('.answers button img');
+const popup = document.getElementById('popup');
+const closePopupBtn = popup.getElementsByClassName('close')[0];
+const topBar = document.getElementsByClassName('game-top-bar')[0];
 
 // To translate
 const title = document.querySelector('header h2');
 const question = document.querySelector('main p:first-child');
-const back = document.querySelector('.game-top-bar ul li:nth-child(1) a');
-const settings = document.querySelector('.game-top-bar ul li:nth-child(2) a');
-const points = document.querySelector('.game-top-bar p:nth-of-type(1)');
-const nextLevel = document.querySelector('.game-top-bar div:nth-of-type(2) p');
+const back = topBar.querySelector('ul li:nth-child(1) a');
+const settings = topBar.querySelector('ul li:nth-child(2) a');
+const points = topBar.querySelector('p:nth-of-type(1)');
+const nextLevel = topBar.querySelector('div:nth-of-type(2) p');
 const nextQuestionBtn = feedbackBar.getElementsByTagName('button')[0];
+const congrats = popup.getElementsByTagName('h2')[0];
+const unlocked = popup.getElementsByTagName('p')[0];
+const backToLevels = popup.getElementsByTagName('a')[0];
+const share = popup.getElementsByTagName('h3')[0];
+const twitterBtn = document.getElementById('twitter');
+const facebookBtn = document.getElementById('facebook');
+const mailBtn = document.getElementById('mail');
+const copyBtn = document.getElementById('copy');
 /* These need to be editable later: we want to make a single fetch of the translation and store the
 result, instead of fetching the text each time we run the feedback functions */
-let incorrectText, correctText, hintText;
+let incorrectText, correctText, hintText, twitterUrl, facebookUrl, mailUrl, copyText;
+
+function adaptTextToUrl(text) {
+    return text.replace(/ /g, '%20').replace(/#/g, '%23');
+}
 
 function translateTexts() {
     fetchTextInfo('game', (texts) => {
@@ -49,6 +64,25 @@ function translateTexts() {
         points.textContent = texts.points[language];
         nextLevel.textContent = texts.nextLevel[language];
         nextQuestionBtn.textContent = texts.next[language];
+        congrats.textContent = texts.congrats[language];
+        unlocked.textContent = texts.unlocked[language];
+        backToLevels.textContent = texts.backToLevels[language];
+        share.textContent = texts.share[language];
+
+        // urls with composed messages (except for facebook) for the share buttons
+        twitterUrl = "https://twitter.com/intent/tweet?text="
+            + `${adaptTextToUrl(texts.message1[language])}`
+            + `%20${level + 1}%20`
+            + `${adaptTextToUrl(texts.message2[language])}`;
+        facebookUrl = "https://www.facebook.com/sharer/sharer.php?u="; //////////////////////// TO-DO: AFEGIR LINK DARRERE
+        mailUrl = "mailto:?subject=Orniteco&"
+            + `body=${adaptTextToUrl(texts.message1[language])}`
+            + `%20${level + 1}%20`
+            + `${adaptTextToUrl(texts.message2[language])}`;
+        copyText = `${texts.message1[language]}`
+            + ` ${level + 1} `
+            + `${texts.message2[language]}`;
+        
         incorrectText = texts.incorrect[language];
         correctText = texts.correct[language];
         hintText = texts.hint[language];
@@ -144,6 +178,21 @@ function drawQuestion(birdChoices, hint) {
     })
 }
 
+function showPopup() {
+    popup.hidden = false;
+    topBar.classList.add('disabledLink');
+    nextQuestionBtn.disabled = true;
+    nextQuestionBtn.classList.add('disabledLink');
+    popupShown = true;
+}
+
+function hidePopup() {
+    popup.hidden = true;
+    topBar.classList.remove('disabledLink');
+    nextQuestionBtn.disabled = false;
+    nextQuestionBtn.classList.remove('disabledLink');
+}
+
 function correctFeedback() {
     feedbackMessage.innerHTML = correctText;
     nextQuestionBtn.hidden = false;
@@ -162,6 +211,10 @@ function givePoints() {
     if (getPoints() + pointsPerCorrectAnswer <= pointsNecessary(level + 1)) {
         sumPoints(10);
         redrawPoints();
+    }
+    if (!popupShown && getPoints() >= pointsNecessary(level + 1)) {
+        showPopup();
+        popupShown = true;
     }
 }
 
@@ -188,6 +241,31 @@ answerContainer.addEventListener('click', e => {
         } else {
             incorrectAnswer();
         }
+    }
+});
+
+closePopupBtn.addEventListener('click', () => {
+    hidePopup();
+});
+
+twitterBtn.addEventListener('click', () => {
+    open(twitterUrl, '_blank');
+});
+
+facebookBtn.addEventListener('click', () => {
+    open(facebookUrl, '_blank');
+});
+
+mailBtn.addEventListener('click', () => {
+    open(mailUrl, '_blank');
+});
+
+copyBtn.addEventListener('click', () => {
+    try {
+        navigator.clipboard.writeText(copyText);
+        copyBtn.innerHTML = '<svg viewBox=\"0 0 24 24\"><path d=\"M2,12L10,20L22,6\"/></svg>';
+    } catch(err) {
+        copyBtn.innerHTML = '<svg viewBox=\"0 0 24 24\"><line x1=\"3\" y1=\"3\" x2=\"21\" y2=\"21\"/><line x1=\"3\" y1=\"21\" x2=\"21\" y2=\"3\"/></svg>';
     }
 });
 
