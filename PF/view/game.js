@@ -110,7 +110,7 @@ function redrawPoints() {
     Then we need to subtract from A the points we already needed to unlock the current level
     */
     let width = (getPoints() >= pointsNecessary(level + 1)) ?
-        100 : Math.floor((getPoints() - pointsNecessary(level)) / pointsNecessary(level + 1) * 100);
+        100 : Math.floor((getPoints() - pointsNecessary(level)) / (pointsNecessary(level + 1) - pointsNecessary(level)) * 100);
     pointBar.style.width = width + '%';
 
     // Make progress readable by screen readers
