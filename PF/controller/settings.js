@@ -45,6 +45,15 @@ function getLanguage() {
     return language;
 }
 
+function setFontOn(font) {
+    localStorage.setItem('font', font);
+}
+
+function getFontOn(){
+    const font = localStorage.getItem('font') ? localStorage.getItem('font') : 'no';
+    return font;
+}
+
 
 export {
     selectLevel,
@@ -55,5 +64,7 @@ export {
     setTheme,
     getTheme,
     setLanguage,
-    getLanguage
+    getLanguage,
+    setFontOn,
+    getFontOn
 };

@@ -1,5 +1,12 @@
 @import url(https://fonts.bunny.net/css?family=righteous:400|source-sans-pro:400,700);
 
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url("./fonts/OpenDyslexic-Bold.otf") format("truetype"),
+         url("./fonts/OpenDyslexic-Regular.otf") format("truetype");
+    size-adjust: 80%;
+}
+
 :root {
     --background: #dcdedd;
     --backgroundGradient: #dcdedd;
@@ -12,6 +19,8 @@
 
     --borderRadius: 1em;
     --hoverFilter: 0.9;
+
+    --font: "Source Sans Pro", sans-serif;
 }
 
 ::-moz-selection {
@@ -25,7 +34,6 @@
 }
 
 * {
-    /* font-family: "Source Sans Pro", sans-serif; */
     margin: 0;
     padding: 0;
     transition:
@@ -310,7 +318,7 @@ b {
 
 body {
     background: var(--background);
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--font);
     height: 100vh;
     padding: 0 20%;
     color: var(--text);
@@ -318,7 +326,11 @@ body {
 
 button {
     border: none;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--font);
+}
+
+checkbox {
+    padding: 1em;
 }
 
 :focus-visible {
@@ -335,6 +347,7 @@ form {
 
 select {
     color: var(--text);
+    font-family: var(--font);
 }
 
 h1,

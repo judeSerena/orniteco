@@ -1,14 +1,20 @@
-import { setTheme, getLanguage, setLanguage, getTheme, getPoints, pointsNecessary } from '../controller/settings.js'
+import { setTheme, getLanguage, setLanguage, getTheme, getFontOn, setFontOn, getPoints, pointsNecessary } from '../controller/settings.js'
 import { fetchThemesInfo, fetchAvailableLanguages, fetchTextInfo } from '../data/fetch.js';
-import { applyTheme } from './applyTheme.js';
+import { applyTheme, applyDislexiaFont } from './applyTheme.js';
 
 // Retrieve DOM elements
+const title = document.getElementsByTagName('h1')[0];
+const back = document.getElementsByClassName('back')[0];
+
 const form = document.getElementsByTagName('form')[0];
+const themeText = form.querySelector('label[for="theme"]');
 const themeSelect = form.querySelector('select[name="theme"]');
 const languageSelect = form.querySelector('select[name="language"]');
-const title = document.getElementsByTagName('h1')[0];
-const themeText = form.querySelector('label[for="theme"]');
-const back = document.getElementsByClassName('back')[0];
+const dyslexiaText = form.querySelector('label[for="dyslexicFont"]');
+const dyslexiaSelect = form.querySelector('select[name="dyslexicFont"]');
+const no = dyslexiaSelect.getElementsByTagName('option')[0];
+const yes = dyslexiaSelect.getElementsByTagName('option')[1];
+
 
 let language = getLanguage();
 
@@ -19,10 +25,12 @@ const fragment = new DocumentFragment();
 function populateThemes() {
     // Fetch the themes array
     fetchThemesInfo((themes) => {
+        // Delete the previous <option>s since they might be in a different language
+        themeSelect.innerHTML = '';
+
         for(let i = 0; i < themes.length; i++) {
             // Only put the theme inside the select if it is unlocked by level
             if(getPoints() >= pointsNecessary(themes[i].unlockAtLevel)) {
-                console.log(getPoints());
                 const option = document.createElement('option');
                 option.value = themes[i].id;
                 option.textContent = themes[i].name[language];
@@ -60,22 +68,30 @@ function translateTexts() {
         title.textContent = texts.title[language];
         themeText.textContent = texts.theme[language];
         back.textContent = texts.back[language];
+        dyslexiaText.textContent = texts.dyslexicFont[language];
+        no.textContent = texts.no[language];
+        yes.textContent = texts.yes[language];
     });
+    populateThemes();
 }
 
-populateThemes();
-populateLanguages();
-form.appendChild(fragment);
 translateTexts();
+populateLanguages();
+if (getFontOn() === 'yes') { yes.selected = true };
+form.appendChild(fragment);
 
 themeSelect.addEventListener('change', (e) => {
-    console.log(e.target.value);
     setTheme(e.target.value);
     applyTheme(e.target.value);
 });
 
 languageSelect.addEventListener('change', (e) => {
-    setLanguage(languageSelect.value);
+    setLanguage(e.target.value);
     language = getLanguage();
     translateTexts();
-})
+});
+
+dyslexiaSelect.addEventListener('change', (e) => {
+    setFontOn(e.target.value);
+    applyDislexiaFont(e.target.value);
+});

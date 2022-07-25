@@ -1,5 +1,5 @@
 import { fetchThemeInfo } from '../data/fetch.js'
-import { getTheme } from '../controller/settings.js'
+import { getTheme, getFontOn } from '../controller/settings.js'
 
 function applyTheme(theme) {
     fetchThemeInfo(theme, (themeData) => {
@@ -11,6 +11,12 @@ function applyTheme(theme) {
     })
 }
 
-applyTheme(getTheme());
+function applyDislexiaFont(fontOn) {
+    const fontName = (fontOn === 'yes') ? 'OpenDyslexic' : '\"Source Sans Pro\", sans-serif';
+    document.documentElement.style.setProperty('--font', fontName);
+}
 
-export { applyTheme };
+applyTheme(getTheme());
+applyDislexiaFont(getFontOn());
+
+export { applyTheme, applyDislexiaFont };

@@ -200,6 +200,24 @@
                     "en": "Theme",
                     "es": "Tema",
                     "tokiPona": "kule lipu"
+                },
+                "dyslexicFont": {
+                    "ca": "Font adaptada a dislèxia",
+                    "en": "Dyslexia-friendly font",
+                    "es": "Fuente adaptada a dislexia",
+                    "tokiPona": "sitelen toki pi pali lili tawa lukin"
+                },
+                "yes": {
+                    "ca": "Sí",
+                    "en": "Yes",
+                    "es": "Sí",
+                    "tokiPona": "o pana"
+                },
+                "no": {
+                    "ca": "No",
+                    "en": "No",
+                    "es": "No",
+                    "tokiPona": "o pana ala"
                 }
             }
         }
