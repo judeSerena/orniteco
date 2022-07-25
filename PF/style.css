@@ -343,7 +343,7 @@ form {
     display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-    height: 50%;
+    height: 60%;
 }
 
 select {
