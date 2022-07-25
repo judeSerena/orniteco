@@ -220,6 +220,7 @@ header {
 .logo {
     font-size: 7em;
     vertical-align: middle;
+    display:inline;
 }
 
 .lvl-nav {
