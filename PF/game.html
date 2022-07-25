@@ -25,13 +25,13 @@
 
                 <div class="flex-center-row">
                     <p id="pointLabel">Punts totals:</p>
-                    <p class="point-total" aria-labelled-by="pointLabel"></p>
+                    <p class="point-total" aria-labelledby="pointLabel"></p>
                 </div>
                 
                 <div class="flex-center-row">
                     <p id="progressLabel">Següent nivell:</label>
                     <div class="point-bar-container neumorphic">
-                        <div class="point-bar" aria-labelled-by="progressLabel" role="progressbar" aria-valuenow="0"></div>
+                        <div class="point-bar" aria-labelledby="progressLabel" role="progressbar" aria-valuenow="0"></div>
                     </div>
                 </div>
                 
@@ -115,7 +115,7 @@
                     </button>
                 </nav>
                 
-                <button class="neumorphic btn close">
+                <button class="neumorphic btn close" title="close">
                     <svg viewBox="0 0 24 24">
                         <line x1="3" y1="3" x2="21" y2="21"/>
                         <line x1="3" y1="21" x2="21" y2="3"/>
@@ -133,19 +133,19 @@
             </audio>
 
             <nav class="answers flex-center-row">
-                <button class="neumorphic btn flex-center-column" data-correct='no'>
+                <button class="neumorphic btn flex-center-column" data-correct='no' aria-labelledby="answer1">
                     <img class="unselectable" alt="">
-                    <p class="common-name"></p>
+                    <p id="answer1" class="common-name"></p>
                     <p class="scientific-name"></p>
                 </button>
-                <button class="neumorphic btn flex-center-column" data-correct='no'>
+                <button class="neumorphic btn flex-center-column" data-correct='no' aria-labelledby="answer2">
                     <img class="unselectable" alt="">
-                    <p class="common-name"></p>
+                    <p id="answer2" class="common-name"></p>
                     <p class="scientific-name"></p>
                 </button>
-                <button class="neumorphic btn flex-center-column" data-correct='no'>
+                <button class="neumorphic btn flex-center-column" data-correct='no' aria-labelledby="answer3">
                     <img class="unselectable" alt="">
-                    <p class="common-name"></p>
+                    <p id="answer3" class="common-name"></p>
                     <p class="scientific-name"></p>
                 </button>
             </nav>
