@@ -24,14 +24,14 @@
                 </ul>
 
                 <div class="flex-center-row">
-                    <p>Punts totals:</p>
-                    <p class="point-total"></p>
+                    <p id="pointLabel">Punts totals:</p>
+                    <p class="point-total" aria-labelled-by="pointLabel"></p>
                 </div>
                 
                 <div class="flex-center-row">
-                    <p>Següent nivell:</p>
+                    <p id="progressLabel">Següent nivell:</label>
                     <div class="point-bar-container neumorphic">
-                        <div class="point-bar"></div>
+                        <div class="point-bar" aria-labelled-by="progressLabel" role="progressbar" aria-valuenow="0"></div>
                     </div>
                 </div>
                 
@@ -39,15 +39,15 @@
             <h2>Nivell</h2>
         </header>
 
-        <div hidden id="popup">
+        <div hidden id="popup" aria-live="polite" role="dialog" aria-labelledby="popupTitle">
             <div class="popup unselectable flex-center-column">
                 <h2>Enhorabona!</h2>
-                <p>Nivell i tema de color desbloquejats!</p>
+                <p id="popupTitle">Nivell i tema de color desbloquejats!</p>
                 
                 <a href="./levels.html" class="neumorphic btn">Tornar a nivells</a>
     
-                <h3>Compartir:</h3>
-                <div class="flex-center-row">
+                <h3 id="share">Compartir:</h3>
+                <nav class="flex-center-row" aria-labelledby="share">
                     <button id="twitter" class="neumorphic btn round share">
                         <svg class="filled" viewBox="0 0 410.155 410.155">
                             <path
@@ -113,7 +113,7 @@
                             C291.206,428.715,289.92,430,288.341,430z"/>
                         </svg>
                     </button>
-                </div>
+                </nav>
                 
                 <button class="neumorphic btn close">
                     <svg viewBox="0 0 24 24">
@@ -134,17 +134,17 @@
 
             <nav class="answers flex-center-row">
                 <button class="neumorphic btn flex-center-column" data-correct='no'>
-                    <img class="unselectable">
+                    <img class="unselectable" alt="">
                     <p class="common-name"></p>
                     <p class="scientific-name"></p>
                 </button>
                 <button class="neumorphic btn flex-center-column" data-correct='no'>
-                    <img class="unselectable">
+                    <img class="unselectable" alt="">
                     <p class="common-name"></p>
                     <p class="scientific-name"></p>
                 </button>
                 <button class="neumorphic btn flex-center-column" data-correct='no'>
-                    <img class="unselectable">
+                    <img class="unselectable" alt="">
                     <p class="common-name"></p>
                     <p class="scientific-name"></p>
                 </button>

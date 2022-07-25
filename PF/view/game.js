@@ -36,13 +36,13 @@ const title = document.querySelector('header h2');
 const question = document.querySelector('main p:first-child');
 const back = topBar.querySelector('ul li:nth-child(1) a');
 const settings = topBar.querySelector('ul li:nth-child(2) a');
-const points = topBar.querySelector('p:nth-of-type(1)');
-const nextLevel = topBar.querySelector('div:nth-of-type(2) p');
+const points = document.getElementById('pointLabel');
+const nextLevel = document.getElementById('progressLabel');
 const nextQuestionBtn = feedbackBar.getElementsByTagName('button')[0];
 const congrats = popup.getElementsByTagName('h2')[0];
-const unlocked = popup.getElementsByTagName('p')[0];
+const unlocked = document.getElementById('popupTitle');
 const backToLevels = popup.getElementsByTagName('a')[0];
-const share = popup.getElementsByTagName('h3')[0];
+const share = document.getElementById('share');
 const twitterBtn = document.getElementById('twitter');
 const facebookBtn = document.getElementById('facebook');
 const mailBtn = document.getElementById('mail');
@@ -82,7 +82,13 @@ function translateTexts() {
         copyText = `${texts.message1[language]}`
             + ` ${level + 1} `
             + `${texts.message2[language]}`;
-        
+
+        // Add aria labels to the icon buttons so that they can be read by screen readers
+        twitterBtn.ariaLabel = `${texts.ariaShare[language]} Twitter`;
+        facebookBtn.ariaLabel = `${texts.ariaShare[language]} Facebook`;
+        mailBtn.ariaLabel = `${texts.ariaShare[language]} ${texts.ariaMail[language]}`;
+        copyBtn.ariaLabel = texts.ariaCopy[language];
+
         incorrectText = texts.incorrect[language];
         correctText = texts.correct[language];
         hintText = texts.hint[language];
@@ -106,6 +112,9 @@ function redrawPoints() {
     let width = (getPoints() >= pointsNecessary(level + 1)) ?
         100 : Math.floor((getPoints() - pointsNecessary(level)) / pointsNecessary(level + 1) * 100);
     pointBar.style.width = width + '%';
+
+    // Make progress readable by screen readers
+    pointBar.ariaValueNow = width;
     
     // By removing and re-adding the class with the animation, it is played again
     pointBar.classList.remove('point-bar-glow');
@@ -184,6 +193,7 @@ function showPopup() {
     nextQuestionBtn.disabled = true;
     nextQuestionBtn.classList.add('disabledLink');
     popupShown = true;
+    backToLevels.focus();
 }
 
 function hidePopup() {
