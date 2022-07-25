@@ -64,7 +64,7 @@
 	        "--titles": "#000",
 	        "--links": "#098a00",
 
-            "--hoverFilter": "0.5"
+            "--hoverFilter": "0.6"
         }
     },
 
@@ -99,16 +99,16 @@
             "es": "Paloma bravía",
             "tokiPona": "waso"
         },
-        "unlockAtLevel" : 0,
+        "unlockAtLevel" : 1,
         "colors": {
             "--background": "#657385",
             "--backgroundGradient": "#657385",
-	        "--lighter": "#5c9e8544",
-	        "--shine": "#5c9e85",
-	        "--shadow": "#562d52",
+	        "--lighter": "#5c9e8520",
+	        "--shine": "#5c9e8590",
+	        "--shadow": "#562d5270",
 	        "--text": "#e4e9ec",
 	        "--titles": "#b9c2d1",
-	        "--links": "#1a1b20",
+	        "--links": "#25252f",
 
             "--hoverFilter": "0.9"
         }
@@ -122,13 +122,13 @@
             "es": "Cotorra argentina",
             "tokiPona": "waso"
         },
-        "unlockAtLevel" : 0,
+        "unlockAtLevel" : 2,
         "colors": {
             "--background": "#6d8744",
-            "--backgroundGradient": "linear-gradient(to top left, #899070, #6d8744)",
-	        "--lighter": "#a0b05044",
-	        "--shine": "#a0b050",
-	        "--shadow": "#21444a",
+            "--backgroundGradient": "linear-gradient(to top left, #6f835f, #6d8744)",
+	        "--lighter": "#90a05044",
+	        "--shine": "#90a050",
+	        "--shadow": "#3c5f50",
 	        "--text": "#e0decc",
 	        "--titles": "#fcebd9",
 	        "--links": "#00495d",
@@ -145,12 +145,12 @@
             "en": "Eurasian magpie",
             "tokiPona": "waso"
         },
-        "unlockAtLevel" : 0,
+        "unlockAtLevel" : 3,
         "colors": {
-            "--background": "#202334",
-            "--backgroundGradient": "linear-gradient(to bottom right, #202334, #1c2454)",
-	        "--lighter": "#29346644",
-	        "--shine": "#293466",
+            "--background": "#20232a",
+            "--backgroundGradient": "linear-gradient(to bottom right, #20232a, 80%, #1c2450)",
+	        "--lighter": "#29345044",
+	        "--shine": "#293450",
 	        "--shadow": "#0a0f1b",
 	        "--text": "#a3a1b6",
 	        "--titles": "#d0cfe8",
@@ -168,18 +168,18 @@
             "en": "Great tit",
             "tokiPona": "waso"
         },
-        "unlockAtLevel" : 0,
+        "unlockAtLevel" : 4,
         "colors": {
             "--background": "#636653",
-            "--backgroundGradient": "radial-gradient(circle at 50% 120%, #262e3b33, 80%, #262e3b)",
+            "--backgroundGradient": "#262e3bbb",
 	        "--lighter": "#fff1",
 	        "--shine": "#fff2",
-	        "--shadow": "#0008",
+	        "--shadow": "#262e3b66",
 	        "--text": "#c5cad0",
 	        "--titles": "#fafdff",
 	        "--links": "#ffd748",
 
-            "--hoverFilter": "0.9"
+            "--hoverFilter": "0.8"
         }
     },
 
@@ -191,15 +191,15 @@
             "en": "Common starling",
             "tokiPona": "waso"
         },
-        "unlockAtLevel" : 0,
+        "unlockAtLevel" : 5,
         "colors": {
-            "--background": "#263032",
-            "--backgroundGradient": "linear-gradient(#263032, #203730)",
-	        "--lighter": "#37495544",
-	        "--shine": "#374955",
-	        "--shadow": "#101018",
+            "--background": "#2a3032",
+            "--backgroundGradient": "linear-gradient(#2a3032, 60%, #253231)",
+	        "--lighter": "#37495525",
+	        "--shine": "#374955a0",
+	        "--shadow": "#10101885",
 	        "--text": "#bdbab5",
-	        "--titles": "#c9b495",
+	        "--titles": "#c0b495",
 	        "--links": "#d9d85e",
 
             "--hoverFilter": "1.1"
