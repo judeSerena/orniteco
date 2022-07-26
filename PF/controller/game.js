@@ -1,6 +1,6 @@
-import { genQuestion } from '../controller/genQuestionCandidates.js';
-import { fetchRecordings, fetchTextInfo } from '../data/fetch.js'
-import { sumPoints, getPoints, pointsNecessary, getSelectedLevel, getLanguage } from '../controller/settings.js';
+import { genQuestion } from './genQuestionCandidates.js';
+import { fetchRecordings, fetchTextInfo } from './fetch.js'
+import { sumPoints, getPoints, pointsNecessary, getSelectedLevel, getLanguage } from './settings.js';
 
 let popupShown = false;
 

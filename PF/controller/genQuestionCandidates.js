@@ -1,5 +1,5 @@
 export { genQuestion };
-import { fetchLevelInfo } from '../data/fetch.js';
+import { fetchLevelInfo } from './fetch.js';
 
 /**
  * Get 2 random bird objects from the current level, a third bird object from either the level

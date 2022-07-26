@@ -1,5 +1,5 @@
-import { selectLevel, getPoints, pointsNecessary, getLanguage } from '../controller/settings.js'
-import { fetchLevelInfo, fetchTextInfo } from '../data/fetch.js';
+import { selectLevel, getPoints, pointsNecessary, getLanguage } from './settings.js'
+import { fetchLevelInfo, fetchTextInfo } from './fetch.js';
 
 // Retrieve the level buttons
 const levelsContainer = document.getElementsByClassName('lvl-nav')[0];

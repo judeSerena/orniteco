@@ -1,5 +1,5 @@
-import { fetchThemeInfo } from '../data/fetch.js'
-import { getTheme, getFontOn } from '../controller/settings.js'
+import { fetchThemeInfo } from './fetch.js'
+import { getTheme, getFontOn } from './settings.js'
 
 function applyTheme(theme) {
     fetchThemeInfo(theme, (themeData) => {

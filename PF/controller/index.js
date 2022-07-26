@@ -1,5 +1,5 @@
-import { getLanguage } from '../controller/settings.js'
-import { fetchTextInfo } from '../data/fetch.js';
+import { getLanguage } from './settings.js'
+import { fetchTextInfo } from './fetch.js';
 
 // To translate
 const subtitle = document.getElementsByTagName('h2')[0];

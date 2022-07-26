@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: "OpenDyslexic";
-    src: url("./fonts/OpenDyslexic-Bold.otf") format("truetype"),
-         url("./fonts/OpenDyslexic-Regular.otf") format("truetype");
+    src: url("./data/fonts/OpenDyslexic-Bold.otf") format("truetype"),
+         url("./data/fonts/OpenDyslexic-Regular.otf") format("truetype");
     size-adjust: 80%;
 }
 
@@ -101,6 +101,7 @@
 }
 
 .popup {
+    background-color: var(--background);
     position: absolute;
         height: 60%;
         width: 40%;
@@ -108,7 +109,6 @@
         left: calc(50% - 20%);
     z-index: 10;
     text-align: center;
-    background: var(--backgroundGradient);
     border-radius: var(--borderRadius);
     box-shadow: 0 0 2rem var(--shadow);
 }

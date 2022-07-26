@@ -101,13 +101,13 @@
         },
         "unlockAtLevel" : 1,
         "colors": {
-            "--background": "#657385",
+            "--background": "#556375",
             "--backgroundGradient": "#657385",
 	        "--lighter": "#5c9e8520",
-	        "--shine": "#5c9e8590",
-	        "--shadow": "#562d5270",
+	        "--shine": "#5c9e85d0",
+	        "--shadow": "#562d5290",
 	        "--text": "#e4e9ec",
-	        "--titles": "#b9c2d1",
+	        "--titles": "#d0d0e0",
 	        "--links": "#25252f",
 
             "--hoverFilter": "0.9"
@@ -124,8 +124,8 @@
         },
         "unlockAtLevel" : 2,
         "colors": {
-            "--background": "#6d8744",
-            "--backgroundGradient": "linear-gradient(to top left, #6f835f, #6d8744)",
+            "--background": "#6c8643",
+            "--backgroundGradient": "linear-gradient(to top left, #6f835f, #6c8643)",
 	        "--lighter": "#90a05044",
 	        "--shine": "#90a050",
 	        "--shadow": "#3c5f50",
@@ -170,11 +170,11 @@
         },
         "unlockAtLevel" : 4,
         "colors": {
-            "--background": "#636653",
-            "--backgroundGradient": "#262e3bbb",
+            "--background": "#626557",
+            "--backgroundGradient": "#262e3ba0",
 	        "--lighter": "#fff1",
 	        "--shine": "#fff2",
-	        "--shadow": "#262e3b66",
+	        "--shadow": "#0015",
 	        "--text": "#c5cad0",
 	        "--titles": "#fafdff",
 	        "--links": "#ffd748",

@@ -1,5 +1,5 @@
-import { setTheme, getLanguage, setLanguage, getTheme, getFontOn, setFontOn, getPoints, pointsNecessary } from '../controller/settings.js'
-import { fetchThemesInfo, fetchAvailableLanguages, fetchTextInfo } from '../data/fetch.js';
+import { setTheme, getLanguage, setLanguage, getTheme, getFontOn, setFontOn, getPoints, pointsNecessary } from './settings.js'
+import { fetchThemesInfo, fetchAvailableLanguages, fetchTextInfo } from './fetch.js';
 import { applyTheme, applyDislexiaFont } from './applyTheme.js';
 
 // Retrieve DOM elements
