@@ -11,6 +11,8 @@ const language = getLanguage();
 
 function translateTexts() {
     fetchTextInfo('index', (texts) => {
+        document.documentElement.lang = language;
+        
         subtitle.textContent = texts.subtitle[language];
         start.textContent = texts.start[language];
         about.textContent = texts.about[language];

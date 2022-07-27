@@ -65,6 +65,8 @@ function populateLanguages() {
 
 function translateTexts() {
     fetchTextInfo('options', (texts) => {
+        document.documentElement.lang = language;
+        
         title.textContent = texts.title[language];
         themeText.textContent = texts.theme[language];
         back.textContent = texts.back[language];

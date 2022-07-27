@@ -8,6 +8,8 @@ const language = getLanguage();
 
 function translateTexts() {
     fetchTextInfo('about', (texts) => {
+        document.documentElement.lang = language;
+
         document.body.innerHTML = texts.body[language];
     });
 }

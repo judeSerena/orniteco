@@ -21,6 +21,8 @@ levelsContainer.addEventListener('click', e => {
 
 function translateTexts() {
     fetchTextInfo('levels', (texts) => {
+        document.documentElement.lang = language;
+        
         title.textContent = texts.title[language];
         subtitle.textContent = texts.subtitle[language];
         back.textContent = texts.back[language];

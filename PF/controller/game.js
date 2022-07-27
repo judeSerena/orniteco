@@ -57,6 +57,8 @@ function adaptTextToUrl(text) {
 
 function translateTexts() {
     fetchTextInfo('game', (texts) => {
+        document.documentElement.lang = language;
+
         title.textContent = `${texts.title[language]} ${level + 1}`;
         question.textContent = texts.question[language];
         back.textContent = texts.back[language];
