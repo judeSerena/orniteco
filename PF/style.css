@@ -303,7 +303,8 @@ a {
 }
 
 a:hover,
-a:focus-visible {
+a:focus-visible,
+footer a {
     color: var(--text);
 }
 
@@ -337,6 +338,13 @@ checkbox {
 :focus-visible {
     outline: 0.4rem solid var(--links);
     border-radius: var(--borderRadius);
+}
+
+footer {
+    position: absolute;
+    left: 3em;
+    bottom: 3em;
+    font-size: smaller;
 }
 
 form {
