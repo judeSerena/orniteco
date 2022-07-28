@@ -76,7 +76,7 @@ function translateTexts() {
             + `${adaptTextToUrl(texts.message1[language])}`
             + `%20${level + 1}%20`
             + `${adaptTextToUrl(texts.message2[language])}`;
-        facebookUrl = "https://www.facebook.com/sharer/sharer.php?u="; //////////////////////// TO-DO: AFEGIR LINK DARRERE
+        facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=https://orniteco.netlify.app/";
         mailUrl = "mailto:?subject=Orniteco&"
             + `body=${adaptTextToUrl(texts.message1[language])}`
             + `%20${level + 1}%20`

@@ -145,10 +145,10 @@
                     "tokiPona": "mi pini e musi pi nanpa"
                 },
                 "message2": {
-                    "ca": "d'#Orniteco! 😁🐦🎵 Aprèn a identificar ocells pel seu cant: [link]",
-                    "en": "of #Orniteco! 😁🐦🎵 Learn to identify birds by their song: [link]",
-                    "es": "de #Orniteco! 😁🐦🎵 Aprende a identificar pájaros por su canto: [link]",
-                    "tokiPona": "lon ilo #Oniteko! 😁🐦🎵 o sona e waso tan kalama ona: [link]"
+                    "ca": "d'#Orniteco! 😁🐦🎵 Aprèn a identificar ocells pel seu cant: https://orniteco.netlify.app/",
+                    "en": "of #Orniteco! 😁🐦🎵 Learn to identify birds by their song: https://orniteco.netlify.app/",
+                    "es": "de #Orniteco! 😁🐦🎵 Aprende a identificar pájaros por su canto: https://orniteco.netlify.app/",
+                    "tokiPona": "lon ilo #Oniteko! 😁🐦🎵 o sona e waso tan kalama ona: https://orniteco.netlify.app/"
                 }
             },
     
