@@ -1,6 +1,6 @@
-#Orniteco
+# Orniteco
 
-###Català
+### Català
 
 Orniteco és un quiz interactiu per a aprendre a identificar ocells pel seu cant.
 Els ocells seleccionats són propis de les àrees urbanes i semi-urbanes de Catalunya, en concret de Barcelona.
@@ -9,7 +9,7 @@ Els àudios enllaçats a cada pregunta provenen del repositori col·laboratiu de
 
 ---
 
-###English
+### English
 
 Orniteco is an interactive quiz to learn to identify birds by their song.
 The birds selected are common to the urban and semi-urban areas of Catalonia, specially of Barcelona.
@@ -18,7 +18,7 @@ The audios linked in each question are provided by the collaborative recording r
 
 ---
 
-###Español
+### Español
 
 Orniteco es un quiz interactivo para aprender a identificar pájaros por su canto.
 Los pájaros seleccionados son propios de las áreas urbanas y semi-urbanas de Cataluña, en concreto de Barcelona.
