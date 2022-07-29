@@ -34,8 +34,8 @@ const topBar = document.getElementsByClassName('game-top-bar')[0];
 // To translate
 const title = document.querySelector('header h2');
 const question = document.querySelector('main p:first-child');
-const back = topBar.querySelector('ul li:nth-child(1) a');
-const settings = topBar.querySelector('ul li:nth-child(2) a');
+const back = topBar.querySelector('a:nth-child(1)');
+const settings = topBar.querySelector('a:nth-child(2)');
 const points = document.getElementById('pointLabel');
 const nextLevel = document.getElementById('progressLabel');
 const nextQuestionBtn = feedbackBar.getElementsByTagName('button')[0];
@@ -133,7 +133,7 @@ function redrawPoints() {
 
 // Reset the content of the answer feedback bar and the color of the body
 function resetFeedback(hint) {
-    feedbackMessage.innerHTML = `<b>${hintText}</b>: ${hint[language]}`;
+    feedbackMessage.innerHTML = `<b>${hintText}</b> ${hint[language]}`;
     nextQuestionBtn.hidden = true;
     document.body.className = '';
     questionContainer.classList.remove('incorrect');

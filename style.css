@@ -52,8 +52,12 @@
     margin-bottom: 0.2em;
 }
 
+.answers {
+    width: 100%;
+}
+
 .answers button {
-    width: 35%;
+    width: 30%;
     height: 15em;
     padding: 0 0 0.6em 0;
 }
@@ -69,7 +73,9 @@
 }
 
 .back {
-    align-self: flex-start;
+    position: absolute;
+    left: 2em;
+    top: 2em;
 }
 
 .big-btn {
@@ -123,34 +129,29 @@
     opacity: 0.6;
 }
 
-.game-top-bar {
-    padding: 0.3em;
-    
-}
-
-header {
-    min-width: 100%;
+.game-top-bar.flex-center-row {
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .game-top-bar * {
-    margin: 0 0.2em;
+    margin: 0 0.3em;
+    /* border: 1px solid blue; */
 }
 
-.game-top-bar li {
-    list-style: none;
-    display: inline-block;
-    margin: 0.7em;
-}
-
-.game-top-bar div {
-    justify-content: center;
-    margin: 0 1em;
+.game-top-bar nav {
+    width: 10em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .question {
     padding: 1em 1em 2em 1em;
-    margin-top: 2em;
+    max-width: 100%;
     min-width: 100%;
+    height: 73vh;
 }
 
 .question audio {
@@ -170,6 +171,7 @@ header {
 #feedbackBar {
     text-align: center;
     font-size: 1.2em;
+    height: 20%;
 }
 
 #feedbackBar button {
@@ -321,9 +323,14 @@ b {
 body {
     background: var(--background);
     font-family: var(--font);
-    height: 100vh;
-    padding: 0 20%;
+    max-height: 100vh;
+    max-width: 100vw;
     color: var(--text);
+}
+
+.wrapper {
+    padding: 0 17%;
+    height: 100vh;
 }
 
 button {
@@ -341,10 +348,8 @@ checkbox {
 }
 
 footer {
-    position: absolute;
-    left: 3em;
-    bottom: 3em;
     font-size: smaller;
+    text-align: center;
 }
 
 form {
@@ -427,13 +432,13 @@ svg.logo {
     }
 }
 
-@media (max-width: 800px){
+@media (max-width: 900px){
     .logo {
-        font-size: 5em;
+        font-size: 4em;
     }
 
     svg.logo {
-        stroke-width: 0.06em;
+        stroke-width: 0.07em;
     }
 
     .title {
@@ -444,7 +449,63 @@ svg.logo {
         font-size: smaller;
     }
 
-    body {
+    .wrapper {
         padding: 0 5%;
+    }
+
+    .game-top-bar {
+        font-size: smaller;
+    }
+
+    .game-top-bar * {
+        margin: 0 0.1em;
+        padding: 0 0.2em;
+    }
+
+    .game-top-bar div {
+        width: 100%;
+    }
+
+    .game-top-bar div:nth-child(3) {
+        width: 20%;
+    }
+
+    .answers {
+        flex-direction: column;
+    }
+
+    .answers button {
+        margin: 1.5vh;
+        padding: 0 0 0.2em 0;
+        width: 20vh;
+        height: 17.5vh;
+    }
+
+    audio {
+        height: 2em;
+    }
+
+    .question {
+        padding: 1vh 4vw 2vh 4vw;
+        min-height: 85%;
+    }
+
+    .answers img {
+        height: 90%;
+        margin: 0 0 0.2em 0;
+    }
+
+    .common-name,
+    #feedbackBar,
+    .game-top-bar h2,
+    .point-total {
+        font-size: small;
+    }
+
+    .popup {
+        height: 60%;
+        width: 80vw;
+        top: calc(50% - 30%);
+        left: calc(50% - 40vw);
     }
 }
