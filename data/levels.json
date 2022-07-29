@@ -252,9 +252,15 @@
                 "tokiPona": ""
             },
             {
-                "ca": "La merla té un cant musical, amb notes relativament greus. També fa crits d'alarma: sèries de \"puc-puc-puc-puc\" per a depredadors terrestres.",
-                "es": "El mirlo común tiene un canto musical, con notas relativamente graves. También hace llamadas de alarma: series de \"puc-puc-puc-puc\" para depredadores terrestres.",
-                "en": "The common blackbird has a musical, relatively low-pitched song. It also makes alarm calls: a series of \"pook-pook-pook-pook\" for terrestrial predators.",
+                "ca": "La merla té un cant musical, amb notes relativament greus.",
+                "es": "El mirlo común tiene un canto musical, con notas relativamente graves.",
+                "en": "The common blackbird has a musical, relatively low-pitched song.",
+                "tokiPona": ""
+            },
+            {
+                "ca": "Els crits d'alarma de la merla són sèries de \"puc-puc-puc-puc\" per a depredadors terrestres.",
+                "es": "Las llamadas de alarma del mirlo son series de \"puc-puc-puc-puc\" para depredadores terrestres.",
+                "en": "The common blackbird's alarm calls are a series of \"pook-pook-pook-pook\" for terrestrial predators.",
                 "tokiPona": ""
             }
         ]
