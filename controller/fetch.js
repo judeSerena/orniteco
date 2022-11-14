@@ -19,7 +19,9 @@ async function fetchRecordings(bird = 'Inventus forfetchus', minQuality = 'c', m
     const endpoint = `https://xeno-canto.org/api/2/recordings?query=${bird.replace(/ /g, '+')}`
         + `+q_gt:${minQuality}`
         + `+len:${minDuration}-${maxDuration}`
-        + `+type:song`;
+        // Momentarily commented out due to what seems to be API problems.
+        // Retrieved recordingss might be of noises (flight...) instead of birdsong.
+        //+ `+type:song`;
     
     let response = await fetch(endpoint);
 
